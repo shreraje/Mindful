@@ -1,3 +1,4 @@
 module.exports = {
-    Mindful: require('./mindful')
+    Mindful: require('./mindful'),
+    User: require('./user')
 };
