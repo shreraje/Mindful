@@ -1,9 +1,11 @@
 import React from 'react';
+import Navbar from '../components/Navbars/Navbar';
 import { Card } from 'react-bootstrap';
 
 const Homepage = () => {
     return (
         <div>
+            <Navbar/>
             <Card>
                 <Card.Img variant="top" src="holder.js/100px160" />
                 <Card.Body>
@@ -23,7 +25,6 @@ const Homepage = () => {
                 </Card.Body>
             </Card>
         </div>
-
     );
 };
 
