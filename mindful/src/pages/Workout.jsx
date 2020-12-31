@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbars/Navbar';
 
-function BreathingExercise() {
+function Workout() {
     return(
         <div>
             <Navbar/>
@@ -9,4 +9,4 @@ function BreathingExercise() {
     );
 };
 
-export default BreathingExercise;
+export default Workout;

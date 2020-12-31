@@ -1,4 +1,4 @@
-mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const MindfulSchema = new mongoose.Schema({
     text: {
