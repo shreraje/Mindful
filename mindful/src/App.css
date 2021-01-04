@@ -2,3 +2,18 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(29, 129, 129);
+}
+
+.card {
+  width: 6in;
+  height: 4in;
+  margin: 1in 1in 1in 1in;
+  justify-content: center;
+  color: ;
+}
+
+.card-col {
+  align-items: center;
+}
