@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+
 * {
-    color: aliceblue;
+    color: rgb(146, 146, 146);
 }
 
-body {
-background-image: linear-gradient(to right, black, teal);
+h1 {
+    color: black;
+    font-family: 'Xanh Mono', monospace;;
+}
+
+.jumbo-background {
+    margin-top: .5in;
+    background-image: url(https://www.therapistaid.com/images/content/interactive/mindfulness-meditation-audio/promo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: .5; */
 }
