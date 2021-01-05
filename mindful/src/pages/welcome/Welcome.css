@@ -14,5 +14,16 @@ h1 {
     background-image: url(https://www.therapistaid.com/images/content/interactive/mindfulness-meditation-audio/promo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    animation: fadein 2s;
+    
     /* opacity: .5; */
+}
+
+.jumbot {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
