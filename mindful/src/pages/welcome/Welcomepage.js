@@ -34,7 +34,7 @@ const Welcome = () => {
                                 <Form.Check type="checkbox" label="Remember me" />
                             </Form.Group>
                             <Button variant="info" type="submit">
-                                Submit
+                                Sign in
                             </Button>
                         </Form>
                     </Jumbotron>
