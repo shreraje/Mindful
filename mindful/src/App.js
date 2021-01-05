@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Welcome from './pages/welcome/Welcomepage';
 import Homepage from './pages/Homepage';
-import BreathingExercise from './pages/Breathingexercise.jsx';
+import BreathingExercise from './pages/BreathingExercise.jsx';
 import Video from './pages/Video';
 import Workout from './pages/Workout';
 import 'bootstrap/dist/css/bootstrap.min.css';

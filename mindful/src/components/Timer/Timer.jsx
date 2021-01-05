@@ -1,13 +1,14 @@
 import React from 'react';
+import './Timer.css';
 import { TimerStartBtn } from '../Buttons/Buttons';
 
 const Timer = (props) => {
-    let totalMin = document.getElementById('minutes-display').value;
-    let totalSec = totalMin * 60;
-    let secondsLeft = '';
-    let secondsElapsed = 0;
-
     const startTimer = () => {
+        let totalMin = document.getElementById('minutes-display').value;
+        let totalSec = totalMin * 60;
+        let secondsLeft = '';
+        let secondsElapsed = 0;
+
         const interval = setInterval(() => {
             secondsElapsed++;
             secondsLeft = totalSec - secondsElapsed;
@@ -29,9 +30,9 @@ const Timer = (props) => {
 
     return(
         <div>
-            <div id="timer-container" class="timer">
-                <div><span id="minutes-display">{props.minutes}</span></div>
-                <div><span id="seconds-display">00</span></div>
+            <div id="timer-container" className="timer">
+                <div><span id="minutes-display" className="timeDisplay">{props.minutes}</span></div>
+                <div><span id="seconds-display" className="timeDisplay">:00</span></div>
             </div>
             <TimerStartBtn
                 start={startTimer}
