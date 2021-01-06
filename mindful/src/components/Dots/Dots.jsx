@@ -9,7 +9,7 @@ const StationaryDot = () => {
 
 const MovingDot = () => {
     return(
-        <span className="moving"></span>
+        <span id="moving" className=""></span>
     );
 };
 
