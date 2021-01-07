@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import BreathingIntro from '../BreathingIntro/BreathingIntro';
 import Timer from '../Timer/Timer';
 import DotContainer from '../DotContainer/DotContainer';
@@ -7,6 +7,7 @@ import './TimerForm.css';
 
 const TimerForm = () => {
     // const [time, setTime] = useState('');
+    const [dotClass, setDotClass] = useState('dot');
 
     // //Handle change to form
     // const handleInputChange = event => {
@@ -20,32 +21,17 @@ const TimerForm = () => {
     //     setTime(event.target.value);
     // };
 
-    //Handle dot animations when timer is started 
-    const beginAnimation = () => {
-        const animatedDot = document.getElementById('moving');
-        console.log(animatedDot);
-        animatedDot.classList.add('expand');
-        const expanded = document.querySelector('.expand');
-        expanded.onanimationend = () => {
-            animatedDot.classList.remove('expand');
-            animatedDot.classList.add('contract');
-            const contracted = document.querySelector('.contract');
-            contracted.onanimationend = () => {
-                animatedDot.classList.remove('contract');
-                animatedDot.classList.add('expand');
-                beginAnimation();
-            };
-        };
-    };
-
     //Begin timer and animation event
     const startTimer = () => {
-        let timesUp = false;
         let totalMin = 5;
         let totalSec = totalMin * 60;
         let secondsLeft;
         let secondsElapsed = 0;
 
+        //Begin dot animation event by setting className via state
+        setDotClass('dot dot_1');
+
+        //Timer Setup
         const interval = setInterval(() => {
             secondsElapsed++;
             secondsLeft = totalSec - secondsElapsed;
@@ -60,16 +46,9 @@ const TimerForm = () => {
             }
 
             if(secondsLeft <= 0) {
-                timesUp = true;
                 clearInterval(interval);
             };
-
-            while(timesUp !== true) {
-                beginAnimation();
-            };
         }, 1000);
-
-        
     };
 
     return(
@@ -103,12 +82,12 @@ const TimerForm = () => {
                 <Col sm={4} md={4} lg={4} xl={4}>
                     <Timer
                         start={startTimer}
-                        // minutes={time}
-                        // animate={beginAnimation}
                     />
                 </Col>
             </Row>
-            <DotContainer/>
+            <DotContainer
+                dotClass={dotClass}
+            />
         </Container>
     );
 };

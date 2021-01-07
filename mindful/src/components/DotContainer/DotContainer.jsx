@@ -1,13 +1,15 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { StationaryDot, MovingDot } from '../Dots/Dots';
+import MovingDot from '../Dots/Dots';
+import './DotContainer.css';
 
-const DotContainer = () => {
+const DotContainer = (props) => {
     return(
         <Row>
-            <Col sm={8} md={8} lg={8} xl={8}>
-                <StationaryDot/>
-                <MovingDot/>
+            <Col sm={8} md={8} lg={8} xl={8} className="dot-container">
+                <MovingDot
+                    dotClass={props.dotClass}
+                />
             </Col>
         </Row>
     );

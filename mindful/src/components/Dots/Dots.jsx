@@ -1,16 +1,10 @@
 import React from 'react';
 import './Dots.css';
 
-const StationaryDot = () => {
+const MovingDot = (props) => {
     return(
-        <span className="stationary"></span>
+        <div className={props.dotClass}></div>
     );
 };
 
-const MovingDot = () => {
-    return(
-        <span id="moving" className=""></span>
-    );
-};
-
-export { StationaryDot, MovingDot };
+export default MovingDot;
