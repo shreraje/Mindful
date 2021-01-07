@@ -1,12 +1,11 @@
-import { PromiseProvider } from 'mongoose';
 import React from 'react';
 import './Buttons.css';
 
-const TimerFormBtn = (props) => {
-    return(
-        <button className="breathingBtns" type="button" onClick={props.change}>Set Time</button>
-    );
-};
+// const TimerFormBtn = (props) => {
+//     return(
+//         <button className="breathingBtns" type="submit" onClick={props.set}>Set Time</button>
+//     );
+// };
 
 const TimerStartBtn = (props) => {
     return(
@@ -14,4 +13,4 @@ const TimerStartBtn = (props) => {
     );
 };
 
-export { TimerFormBtn, TimerStartBtn };
+export { TimerStartBtn };
