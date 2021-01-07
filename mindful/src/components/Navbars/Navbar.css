@@ -1,3 +1,26 @@
 .nav-wrapper {
     background-color: grey;
 }
+
+.mindful-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .brand-logo {
+    background-image: linear-gradient(to right, black,gray, black, gray, black);
+    padding-top: .5in;
+    border-radius: 83px;
+    font-weight: bold;
+  }
+  
+  .brand-logo:hover {
+    background-image: linear-gradient(to right, black, teal, black);
+    padding-top: .006in;
+    
+  }
+  
+  .login {
+    padding-right: .25in;
+  }
