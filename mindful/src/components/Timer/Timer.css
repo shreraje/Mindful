@@ -1,0 +1,18 @@
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 2em;
+    width: 13em;
+    margin: auto;
+    border-radius: 30px;
+    background-color: #070000;
+    box-shadow: 10px 20px 20px #494545;
+};
+
+.timeDisplay {
+    color: rgb(23, 243, 23);
+};

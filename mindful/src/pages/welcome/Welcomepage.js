@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Form, Container, Jumbotron } from 'react-bootstrap';
 // import 'materialize-css';
-import Navbar from '../../components/Navbars/Navbar'
+import Navbar from '../../components/Navbars/Navbar';
 import './Welcome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,9 +11,7 @@ const Welcome = () => {
             <Navbar/>
             <Container>
                     <Jumbotron className="jumbo-background">
-
-                        <h1 style={{ textAlign: "center" }}>Welcome to Mindful
-                        </h1>
+                        <h1 style={{ textAlign: "center" }}>Welcome to Mindful</h1>
                     </Jumbotron>
                     
                     <Jumbotron className="jumbot">
