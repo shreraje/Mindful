@@ -10,7 +10,7 @@ const Navbar = () => {
       <div>
         <nav>
           <div className="nav-wrapper">
-            <img src={logo} width="60" height="50" alt="App Logo" className="brand-logo center"></img>
+            <img src={logo} width="70" height="57" alt="App Logo" className="brand-logo center hoverable"></img>
             <a href="/welcome" className="right">Login</a>
             <ul id="nav-mobile" className="left hide-on-med-and-down">
               <li><Link to="/">Home</Link></li>
