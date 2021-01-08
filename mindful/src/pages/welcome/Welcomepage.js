@@ -14,7 +14,7 @@ const Welcome = () => {
                         <h1 style={{ textAlign: "center" }}>Welcome to Mindful</h1>
                     </Jumbotron>
                     
-                    <Jumbotron>
+                    <Jumbotron className="jumbot">
                         <Form>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>

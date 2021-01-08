@@ -17,11 +17,17 @@ body {
 
 .card {
   color: black;
-  width: 60%;
-  height: 60%;
   margin: 0 auto;
   float: none;
   margin-bottom: 20px;
+  animation: 2.5s circle reverse;
+}
+
+@keyframes circle {
+  0% { clip-path: circle(75%); }
+  40% { clip-path: circle(5%);}
+  25% { clip-path: circle(3%);}
+  75% { clip-path: circle(0%); }
 }
 
 .cardText {
@@ -49,24 +55,3 @@ body {
   background-size: cover;
 }
 
-.mindful-text {
-  font-family: 'zeyada', cursive;
-  text-align: center;
-  font-size: 30px;
-  color: white;
-  letter-spacing: .2em;
-  
-}
-
-.brand-logo {
-  background-image: linear-gradient(to right, black,gray, black, gray, black);
-  padding-top: .5in;
-  border-radius: 83px;
-  font-weight: bold;
-}
-
-.brand-logo:hover {
-  background-image: linear-gradient(to right, black, teal, black);
-  padding-top: .006in;
-  
-}
