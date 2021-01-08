@@ -8,6 +8,7 @@ const BreathingIntro = () => {
             <Col>
                 <div className="intro-container">
                     <header className="intro-header">Box Breathing: You try it!</header>
+                    <hr></hr>
                     <p className="intro-text">Box breathing is a technique that allows practitioners to heighten concentration and performance
                         while simaltaneously acting as a powerful stress reliever. This technique has proven benefits
                         and is commonly used by athletes, military members, police officers, and even those who suffer
@@ -29,7 +30,16 @@ const BreathingPractices = (props) => {
         <Col sm={12} md={6} lg={6} xl={6} className="practice-col">
             <div className="practice-container">
                 <header className="practice-header" key={props.id}>{props.title}</header>
+                <hr></hr>
                 <p className="practice-text">{props.desc}</p>
+                <ul className="steps">
+                    {props.steps.map(step => {
+                        return(
+                            <li>{step}</li>
+                        )
+                    })
+                    }
+                </ul>
             </div>
         </Col>
     );

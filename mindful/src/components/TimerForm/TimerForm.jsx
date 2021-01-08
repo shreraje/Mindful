@@ -7,8 +7,10 @@ import techniqueData from '../../breathingPractices.json';
 import './TimerForm.css';
 
 const TimerForm = () => {
+    //State management
     const [dotClass, setDotClass] = useState('dot');
     const [techniques, setTechniques] = useState([]);
+    const [enableBtn, setEnableBtn] = useState(false);
 
     useEffect(() => {
         setTechniques(techniqueData)
@@ -20,6 +22,9 @@ const TimerForm = () => {
         let totalSec = totalMin * 60;
         let secondsLeft;
         let secondsElapsed = 0;
+
+        //Change timer start button to disabled status
+        setEnableBtn(true);
 
         //Begin dot animation event by setting className via state
         setDotClass('dot dot_1');
@@ -39,7 +44,9 @@ const TimerForm = () => {
             }
 
             if(secondsLeft <= 0) {
+                //Return dot to stationary position, enable timer start, clear interval
                 setDotClass('dot');
+                setEnableBtn(false);
                 clearInterval(interval);
             };
         }, 1000);
@@ -50,6 +57,7 @@ const TimerForm = () => {
             <BreathingIntro/>
                 <Timer
                     start={startTimer}
+                    able={enableBtn}
                 />
             <DotContainer
                 dotClass={dotClass}
@@ -62,8 +70,9 @@ const TimerForm = () => {
                             id={item.id}
                             title={item.title}
                             desc={item.desc}
+                            steps={item.steps}
                         />
-                    );
+                    )
                 })};
             </Row>
             

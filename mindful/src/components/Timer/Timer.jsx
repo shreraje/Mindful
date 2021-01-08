@@ -14,6 +14,7 @@ const Timer = (props) => {
                 <div className="btn-container">
                     <TimerStartBtn
                         start={props.start}
+                        able={props.able}
                     />
                 </div>
             </Col>

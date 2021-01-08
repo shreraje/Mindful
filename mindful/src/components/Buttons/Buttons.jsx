@@ -1,12 +1,11 @@
-
-// import { PromiseProvider } from 'mongoose';
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import './Buttons.css';
 
 const TimerStartBtn = (props) => {
     return(
-        <button className="breathingBtns" onClick={props.start}>Begin</button>
+        <Button className="breathingBtns" onClick={props.start} disabled={props.able}>Begin</Button>
     );
 };
 
-export { TimerFormBtn, TimerStartBtn };
+export { TimerStartBtn };

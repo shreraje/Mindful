@@ -3,6 +3,7 @@ import Navbar from '../components/Navbars/Navbar';
 import 'materialize-css';
 import { Tab, Tabs, Slider, Slide, Caption } from 'react-materialize';
 import ReactPlayer from "react-player"
+import Footer from '../components/Footer/Footer';
 
 function Video() {
     return(
