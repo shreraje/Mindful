@@ -6,7 +6,7 @@ import './DotContainer.css';
 const DotContainer = (props) => {
     return(
         <Row>
-            <Col sm={8} md={8} lg={8} xl={8} className="dot-container">
+            <Col sm={12} md={12} lg={12} xl={12} className="dot-container">
                 <MovingDot
                     dotClass={props.dotClass}
                 />

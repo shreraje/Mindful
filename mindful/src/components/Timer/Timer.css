@@ -1,18 +1,22 @@
 .timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     font-family: 'Russo One', sans-serif;
     font-size: 2em;
-    width: 13em;
-    margin: auto;
+    width: 10em;
+    margin: 10px auto;
     border: 2px solid white;
     border-radius: 30px;
     background-color: #070000;
     box-shadow: 10px 20px 20px #494545;
-};
+}
 
-#seconds-display {
-    color: rgb(23, 243, 23)
-};
+.time-display {
+    font-size: 2em;
+    color: rgb(23, 243, 23);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,3 +1,32 @@
+.intro-container {
+    background: rgba(178, 178, 178, 0.65);
+    padding: 20px;
+}
+
 .intro-header {
+    font-family: 'Xanh Mono', monospace;
+    font-size: 35px;
     text-align: center;
-};
+}
+
+.intro-text {
+    text-align: justify;
+}
+
+.practice-container {
+    height: 450px;
+    background: rgba(178, 178, 178, 0.65);
+    padding: 20px;
+    margin: 10px;
+}
+
+.practice-header {
+    font-family: 'Xanh Mono', monospace;
+    font-size: 35px;
+    text-align: center;
+}
+
+.practice-text {
+    text-align: justify;
+}
+
