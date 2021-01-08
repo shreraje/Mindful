@@ -2,42 +2,49 @@
     {
         "id": 1,
         "title": "Pursed Lip Breathing",
-        "desc": "A simple technique that assists in slowing your pace of breathig by forcing the practitioner to apply a deliberate effort to every breath and bringing focus back to the present moment. An excellent technique for quick use in a high stress situation to rapidly bring attention back to a calmer mindset."
+        "desc": "A simple technique that assists in slowing your pace of breathig by forcing the practitioner to apply a deliberate effort to every breath and bringing focus back to the present moment. An excellent technique for quick use in a high stress situation to rapidly bring attention back to a calmer mindset.",
+        "steps": ["1. Release tension from your neck, shoulders, and face.", "2. Close your mouth and inhale slowly through your nose for 2 - 3 seconds.", "3. Purse your lips as if preparing to whistle.", "4. Exhale blowing through your pursed lips for a count of 3 - 4 seconds."]
     },
 
     {
         "id": 2,
         "title": "Diaphragmatic Breathing",
-        "desc": "Diaphragmatic breathing, or belly breathing, will assist you in practicing the proper use of your diaphragm. This technique is best practiced when you are feeling relaxed and rested, usually right before bed or early in the morning after waking up. At first this practice may be difficult, but as you continue the practice it will become easier and become more natural over time."
+        "desc": "Diaphragmatic breathing, or belly breathing, will assist you in practicing the proper use of your diaphragm. This technique is best practiced when you are feeling relaxed and rested, usually right before bed or early in the morning after waking up. At first this practice may be difficult, but as you continue the practice it will become easier and become more natural over time.",
+        "steps": ["1. Lie down on your back in a comfortable position. Support your head with a pillow and place another beneath your knees for a slight bend.", "2. Place one hand on your chest and one slightly below your rib cage.", "3. Slowly inhale through your nose while maintaining focus on your diaphragm and feeling it press into your hand.", "4. Keep the hand on your chest as still as possible.", "5. Exahle while pursing your lips and contracting your stomach muscles while keeping the hand on your chest very still."]
     },
 
     {
         "id": 3,
         "title": "Breathing Focus",
-        "desc": "This technique incorporates imagery and phrases or mantras to aid in sharpening your focus. Choose a word, phrase, or image that takes you to your happy place where you can feel relaxed and at peace. Choose something short and easy to remember so that your focus on relaxation can be easily maintained. Examples might be 'I am calm', 'breathe', or 'relax'. For beginners, start with a 5 - 10 minute session and slowly build the duration until your sessions are 20 minutes long."
+        "desc": "This technique incorporates imagery and phrases or mantras to aid in sharpening your focus. Choose a word, phrase, or image that takes you to your happy place where you can feel relaxed and at peace. Choose something short and easy to remember so that your focus on relaxation can be easily maintained. Examples might be 'I am calm', 'breathe', or 'relax'. For beginners, start with a 5 - 10 minute session and slowly build the duration until your sessions are 20 minutes long.",
+        "steps": ["1. Sit or lie down in a comfortable position.", "2. Focus on your breathing without trying to alter how you breathe.", "3. Now begin to take deeper breaths and note the differences you experience in how your chest and abdomen expand and contract.", "4. Set aside 1 - 2 minutes to alternate between regular and deep breathing, noticing the differences.", "5. Begin your practice switching fully to deep breathing and bringing your awareness to the image or phrase you have chosen.", "6. Imagine each inhale bringing waves of tranquility and peace and each exhale washing away tension and stress."]
     },
 
     {
         "id": 4,
         "title": "Alternate Nostril Breathing",
-        "desc": "Alternate nostril breathing is also known as nadi shodhana pranayama in Sanksrit and is widely practiced as it has been proven to improve cardiovascular functions and to lower the users heart rate. To get the full benefit of this exercise, it is best practiced on an empty stomach so an ideal time to perform this exercise is right before breakfast. If you feel congested or have difficulty breathing, it would be best to choose another technique that better suits your needs. Keep your breath smooth and even throughout this exercise for the best results."
+        "desc": "Alternate nostril breathing is also known as nadi shodhana pranayama in Sanksrit and is widely practiced as it has been proven to improve cardiovascular functions and to lower the users heart rate. To get the full benefit of this exercise, it is best practiced on an empty stomach so an ideal time to perform this exercise is right before breakfast. If you feel congested or have difficulty breathing, it would be best to choose another technique that better suits your needs. Keep your breath smooth and even throughout this exercise for the best results.",
+        "steps": ["1. Find a comfortable seated position.", "2. Make a piching hand with your pointer and middle fingers and thumb extended.", "3. Push all of the air out of your lungs and close your right nostril by pressing with your thumb.", "4. Inhale through your left nostril and then close it with your pointer and middle finger.", "5. Release your thumb and exahle out your right nostril.", "6. Repeat this process, alternating nostrils for up to 5 minutes."]
     },
 
     {
         "id": 5,
         "title": "Equal Breathing",
-        "desc": "The purpose of equal breathing, or sama vritti as it is known in Sanskrit, is to bring balance to your breaths by making inhales and exhales the same length, much like the goal of the box breathing technique listed above. Experiment with this exercise and find a length that is not too easy but is also maintanable and doesn't require extensive effort. For most people this will be a breath between 3 and 5 seconds in length. For beginners, practice this while in a relaxed seated position until you feel comfortable enough to advance. For more advanced practitioners this exercise can be performed while doing daily activites or during light exercise like yoga."
+        "desc": "The purpose of equal breathing, or sama vritti as it is known in Sanskrit, is to bring balance to your breaths by making inhales and exhales the same length, much like the goal of the box breathing technique listed above. Experiment with this exercise and find a length that is not too easy but is also maintanable and doesn't require extensive effort. For most people this will be a breath between 3 and 5 seconds in length. For beginners, practice this while in a relaxed seated position until you feel comfortable enough to advance. For more advanced practitioners this exercise can be performed while doing daily activites or during light exercise like yoga.",
+        "steps": ["1. Find a comfortable seated position.", "2. Breathe in and out through your nose for a count of 3 - 5 seconds. You may either count to ensure even length, or repeat a calming phrase that will ensure balanced breaths.", "3. You may add in a pause after each inhale and exhale if you feel comfortable.", "4. Repeat this process for 5 minutes and take note of the effects."]
     },
 
     {
         "id": 6,
         "title": "Resonant Breathing",
-        "desc": "Resonant or coherent breathing is the practice of breathing at a rate of 5 full breaths per minute which can be achieved by taking an inhale of 5 seconds and an exhale of 5 seconds. This rate of breathing is meant to maximize your heart rate variability (HRV) which is a measure of the variation in time between each heartbeat which is controlled by our autonomic nervous system. According to some studies, consistent practice of this technique in addition to yoga and light exercise reduced symptoms of depression in some of its practitioners."
+        "desc": "Resonant or coherent breathing is the practice of breathing at a rate of 5 full breaths per minute which can be achieved by taking an inhale of 5 seconds and an exhale of 5 seconds. This rate of breathing is meant to maximize your heart rate variability (HRV) which is a measure of the variation in time between each heartbeat which is controlled by our autonomic nervous system. According to some studies, consistent practice of this technique in addition to yoga and light exercise reduced symptoms of depression in some of its practitioners.",
+        "steps": ["1. Inhale for a count of 5 seconds.", "2. Exhale for a count of 5 seconds.", "3. Continue this pattern for a minimum of 2 minutes and take note of its effects."]
     },
     
     {
         "id": 7,
         "title": "Humming Bee Breath",
-        "desc": "This technique combines breathing with humming to create a unique sensation that can be used to relieve frustration, anxiety, and anger. The sensation is especially soothing around the forehead and can be a great practice following tense situations that require you to blow off some steam."
+        "desc": "This technique combines breathing with humming to create a unique sensation that can be used to relieve frustration, anxiety, and anger. The sensation is especially soothing around the forehead and can be a great practice following tense situations that require you to blow off some steam.",
+        "steps": ["1. Find a comfortable seated position.", "2. Close your eyes and release all the tension from your neck, shoulders, and facial muscles.", "3. Place your pointer and middle fingers on the cartilage that protrudes slightly over your ear canal.", "4. Inhale, and as you exhale gently press your fingers into the cartilage.", "5. Keeping your mouth closed, make a gentle humming sound.", "6. Continue this exercise for as long as you desire."]
     }
 ]
