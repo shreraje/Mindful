@@ -6,9 +6,9 @@ const BreathingIntro = () => {
     return(
         <Row>
             <Col>
-                <div>
-                    <h1 className="intro-header">Box Breathing Practice</h1>
-                    <p id="intro-text">Box breathing is a technique that allows practitioners to heighten concentration and performance
+                <div className="intro-container">
+                    <header className="intro-header">Box Breathing: You try it!</header>
+                    <p className="intro-text">Box breathing is a technique that allows practitioners to heighten concentration and performance
                         while simaltaneously acting as a powerful stress reliever. This technique has proven benefits
                         and is commonly used by athletes, military members, police officers, and even those who suffer
                         from lung diseases such as chronic obstructive pulmonary disease (COPD). To perform this exercise, sit
@@ -24,4 +24,15 @@ const BreathingIntro = () => {
     );
 };
 
-export default BreathingIntro;
+const BreathingPractices = (props) => {
+    return(
+        <Col sm={12} md={6} lg={6} xl={6} className="practice-col">
+            <div className="practice-container">
+                <header className="practice-header" key={props.id}>{props.title}</header>
+                <p className="practice-text">{props.desc}</p>
+            </div>
+        </Col>
+    );
+};
+
+export { BreathingIntro, BreathingPractices };
