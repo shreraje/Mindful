@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../../image/mindful_logo.png';
+import text from '../../image/mindful_text.png';
 // import 'materialize-css'; // It installs the JS asset onlyz
 import 'materialize-css/dist/css/materialize.min.css';
 
@@ -20,7 +21,7 @@ const Navbar = () => {
             </ul>
           </div>
         </nav>
-        <img src={AppName} width="100" alt="App Name" className="mindful-text center"></img>
+        <img src={text } width="100" alt="App Name" className="mindful-text center"></img>
       </div>
     );
 };
