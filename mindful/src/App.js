@@ -7,6 +7,7 @@ import BreathingExercise from './pages/Breathingexercise.jsx';
 import Video from './pages/Video';
 import Workout from './pages/Workout';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';
 
 function App() {

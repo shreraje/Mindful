@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../../image/mindful_logo.png';
-import AppName from '../../image/mindful_text.png';
-// import 'materialize-css'; // It installs the JS asset only
+// import 'materialize-css'; // It installs the JS asset onlyz
 import 'materialize-css/dist/css/materialize.min.css';
 
 const Navbar = () => {
