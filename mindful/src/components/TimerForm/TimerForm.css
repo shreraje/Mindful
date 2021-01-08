@@ -1,3 +1,11 @@
 #form-control {
     background-color: white;
 };
+
+#form-container {
+    width: 70%;
+};
+
+div.row {
+    margin: auto;
+};

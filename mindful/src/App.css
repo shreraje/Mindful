@@ -57,24 +57,3 @@ body {
   background-size: cover;
 }
 
-.mindful-text {
-  font-family: 'zeyada', cursive;
-  text-align: center;
-  font-size: 30px;
-  color: white;
-  letter-spacing: .2em;
-  
-}
-
-.brand-logo {
-  background-image: linear-gradient(to right, black,gray, black, gray, black);
-  padding-top: .5in;
-  border-radius: 83px;
-  font-weight: bold;
-}
-
-.brand-logo:hover {
-  background-image: linear-gradient(to right, black, teal, black);
-  padding-top: .006in;
-  
-}
