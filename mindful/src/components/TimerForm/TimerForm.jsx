@@ -1,25 +1,18 @@
-import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import BreathingIntro from '../BreathingIntro/BreathingIntro';
+import React, { useState, useEffect } from 'react';
+import { Container, Row } from 'react-bootstrap';
+import { BreathingIntro, BreathingPractices } from '../BreathingIntro/BreathingIntro';
 import Timer from '../Timer/Timer';
 import DotContainer from '../DotContainer/DotContainer';
+import techniqueData from '../../breathingPractices.json';
 import './TimerForm.css';
 
 const TimerForm = () => {
-    // const [time, setTime] = useState('');
     const [dotClass, setDotClass] = useState('dot');
+    const [techniques, setTechniques] = useState([]);
 
-    // //Handle change to form
-    // const handleInputChange = event => {
-    //     setTime(event.target.value);
-    // };
-
-    // //Set the time that the user selected
-    // const submitTime = event => {
-    //     event.preventDefault();
-    //     console.log(event.target.value);
-    //     setTime(event.target.value);
-    // };
+    useEffect(() => {
+        setTechniques(techniqueData)
+    }, []);
 
     //Begin timer and animation event
     const startTimer = () => {
@@ -46,6 +39,7 @@ const TimerForm = () => {
             }
 
             if(secondsLeft <= 0) {
+                setDotClass('dot');
                 clearInterval(interval);
             };
         }, 1000);
@@ -54,40 +48,25 @@ const TimerForm = () => {
     return(
         <Container>
             <BreathingIntro/>
-            {/* <Row>
-                <Col sm={6} md={6} lg={6} xl={6}>
-                    <Form id="form-container">
-                        <Form.Group>
-                            <Form.Label id="form-header">Box breathing practice!</Form.Label>
-                            <Form.Control 
-                                id="form-control"
-                                type="text" 
-                                placeholder="Enter a time limit"
-                                name="minutes"
-                                value={time}
-                                onChange={handleInputChange}
-                            />
-                            <Form.Text id="form-text">
-                                It is recommended you perform this exericse for a minimum 2 minutes
-                            </Form.Text>
-                        </Form.Group>
-                    </Form>
-                    <TimerFormBtn
-                        set={submitTime}
-                    />
-                </Col>
-            </Row> */}
-
-            <Row>
-                <Col sm={4} md={4} lg={4} xl={4}>
-                    <Timer
-                        start={startTimer}
-                    />
-                </Col>
-            </Row>
+                <Timer
+                    start={startTimer}
+                />
             <DotContainer
                 dotClass={dotClass}
             />
+            <Row>
+                {techniques.map(item => {
+                    return(
+                        <BreathingPractices
+                            key={item.id}
+                            id={item.id}
+                            title={item.title}
+                            desc={item.desc}
+                        />
+                    );
+                })};
+            </Row>
+            
         </Container>
     );
 };
