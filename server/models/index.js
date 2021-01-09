@@ -1,4 +1,5 @@
 module.exports = {
     Mindful: require('./mindful'),
-    User: require('./user')
+    User: require('./user'),
+    Journal: require('./journal')
 };
