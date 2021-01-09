@@ -2,6 +2,7 @@
     background: grey;
 }
 
-.links {
+#link1, #link2 {
     color: white;
+    text-align: center;
 }
