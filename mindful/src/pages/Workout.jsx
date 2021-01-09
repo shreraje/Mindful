@@ -92,16 +92,31 @@ function Workout() {
                                 <hr/>
                                 <p>Exercise is a vital component to leading a long and healthy life. This tool can be used to track your progress as well as document your workout/meditation progression.</p>
                                 <br/>
+                                <h3 style={{textAlign: 'center'}}>Your Progress</h3>
                                 <Card>
-                                    <Card.Title style={{textAlign: 'center'}}>Your Progress</Card.Title>
-                                    <hr/>
-                                    <Card.Text>Exercise History: </Card.Text>
-                                    <Card.Text>Total Exercise Duration: </Card.Text>
-                                    <hr/>
-                                    <Card.Text>Meditation History: </Card.Text>
-                                    <Card.Text>Total Meditation Duration: </Card.Text>
-                                    <hr/>
-                                    <Card.Text>Journal Entries: </Card.Text>
+                                    <Card.Body>
+                                        <Card.Title>Exercise</Card.Title>
+                                        <hr/>
+                                        <Card.Text>History: </Card.Text>
+                                        <Card.Text>Total Exercise Duration: </Card.Text>
+                                    </Card.Body>
+                                </Card>
+
+                                <Card>
+                                    <Card.Body>
+                                        <Card.Title>Meditation</Card.Title>
+                                        <hr/>
+                                        <Card.Text>History: </Card.Text>
+                                        <Card.Text>Total Meditation Duration: </Card.Text>
+                                    </Card.Body>
+                                </Card>
+
+                                <Card>
+                                    <Card.Body>
+                                        <Card.Title>Wellness Journal</Card.Title>
+                                        <hr/>
+
+                                    </Card.Body>
                                 </Card>
                             </Jumbotron>
                     </Tab>
@@ -196,6 +211,7 @@ function Workout() {
                         <Jumbotron id="jumbo">
                             <h3>Wellness Journal</h3>
                             <hr/>
+                            <p>It's important to keep track of your wellness. This journal here is just for that. Write about how you've felt after each exercise or meditation session you've completed!</p>
                             <Form.Group>
                                 <Form>
                                     <Form.Label>Wellness Journal</Form.Label>
