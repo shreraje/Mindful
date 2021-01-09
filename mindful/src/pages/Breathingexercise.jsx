@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbars/Navbar';
 import TimerForm from '../components/TimerForm/TimerForm';
 import { Jumbotron } from 'react-bootstrap';
-import Footer from '../components/Footer/Footer';
+import Footer from '../components/Footer/Footer'
 
 function BreathingExercise() {
     return(
@@ -11,6 +11,7 @@ function BreathingExercise() {
             <Jumbotron>
                 <TimerForm/>   
             </Jumbotron>
+            <Footer/>
         </div>
     );
 };
