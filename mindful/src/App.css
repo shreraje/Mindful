@@ -10,6 +10,10 @@ body {
   
 }
 
+#popover-basic {
+  font-size: 11px;
+}
+
 .jumbo {
   margin-top: 1in;
   height: 35rem !important;

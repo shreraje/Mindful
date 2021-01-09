@@ -46,5 +46,12 @@
         "title": "Humming Bee Breath",
         "desc": "This technique combines breathing with humming to create a unique sensation that can be used to relieve frustration, anxiety, and anger. The sensation is especially soothing around the forehead and can be a great practice following tense situations that require you to blow off some steam.",
         "steps": ["1. Find a comfortable seated position.", "2. Close your eyes and release all the tension from your neck, shoulders, and facial muscles.", "3. Place your pointer and middle fingers on the cartilage that protrudes slightly over your ear canal.", "4. Inhale, and as you exhale gently press your fingers into the cartilage.", "5. Keeping your mouth closed, make a gentle humming sound.", "6. Continue this exercise for as long as you desire."]
+    },
+    
+    {
+        "id": 8,
+        "title": "Wim Hof Method",
+        "desc": "Wim Hof, or The Iceman as some know him, is a Dutch extreme athlete with a notable ability to withstand freezing temperatures for extended periods of time. He has achieved incredible feats of physical endurance and has developed his own breathing method to incorporate into his program. This technique should be practiced only by those who are in good health and should be done on an empty stomach for the best effect. It is important to start at a comfortable level with this exercise and gradually build your way up as this exercise includes long periods of breath holding.",
+        "steps": ["1. Find a comfortable position either sitting or lying down.", "2. Quickly inhale through your nose filling your lungs.", "3. Exhale rapidly through your mouth. Do not fully empty your lungs and stop the exhale at a comfortable point.", "4. Repeat steps 2 and 3 for 30 breaths.", "5. On the 30th count, take a deep breath and exhale then hold your breath until you feel the urge to breath.", "6. When you inhale again, hold that breath for 10 seconds.", "7. Repeat this exercise 3 times. You should feel yourself able to hold your breath for longer on each repetition."]
     }
 ]
