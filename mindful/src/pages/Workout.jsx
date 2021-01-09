@@ -2,7 +2,9 @@ import React from 'react';
 import Navbar from '../components/Navbars/Navbar';
 import Footer from '../components/Footer/Footer';
 import '../App.css'
-import { Jumbotron, Container, Form , Button, Popover, OverlayTrigger, Card, Tabs, Tab } from 'react-bootstrap'
+import { Jumbotron, Container, Form , Button, Popover, OverlayTrigger, Card } from 'react-bootstrap'
+import 'materialize-css';
+import { Tab, Tabs } from 'react-materialize';
 
 const workoutPopover = (
     <Popover id = "popover-basic">
@@ -78,9 +80,14 @@ function Workout() {
         <div>
             <Navbar/>
             <Container>
-                <Tabs defaultActiveKey="progress">
-                    <Tab eventKey="progress" title="Progress">
-                        <Jumbotron>
+                <Tabs className="tab-demo z-depth-1 tabs-fixed-width">
+                    <Tab options={{
+                        onShow: null,
+                        responsiveThreshold: Infinity,
+                        swipeable: false
+                        }}
+                        title="Progress">
+                        <Jumbotron id="jumbo">
                                 <h3>Welcome to Your Workout/Meditation Tracker!</h3>
                                 <hr/>
                                 <p>Exercise is a vital component to leading a long and healthy life. This tool can be used to track your progress as well as document your workout/meditation progression.</p>
@@ -98,8 +105,12 @@ function Workout() {
                                 </Card>
                             </Jumbotron>
                     </Tab>
-                    <Tab eventKey="workout" title="Workout Tracker">
-                    <Jumbotron>
+                    <Tab options={{
+                        onShow: null,
+                        responsiveThreshold: Infinity,
+                        swipeable: false
+                        }} title="Workout Tracker">
+                        <Jumbotron id="jumbo">
                             <h3>Workout Tracker</h3>
                             <hr/>
                             
@@ -135,8 +146,12 @@ function Workout() {
 
                         </Jumbotron>
                     </Tab>
-                    <Tab eventKey="meditation" title="Meditation Tracker">
-                    <Jumbotron>
+                    <Tab options={{
+                        onShow: null,
+                        responsiveThreshold: Infinity,
+                        swipeable: false
+                        }} title="Meditation Tracker">
+                        <Jumbotron id="jumbo">
                             <h3>Meditation Tracker</h3>
                             <hr/>
                             <p>Physical exercise is important, but something else that is just as important is mental exercise! Use this tracker here to keep track of your meditation sessions!</p>
@@ -173,8 +188,12 @@ function Workout() {
                             </Form.Group>
                         </Jumbotron>
                     </Tab>
-                    <Tab eventKey="journal" title="Journal">
-                    <Jumbotron>
+                    <Tab options={{
+                        onShow: null,
+                        responsiveThreshold: Infinity,
+                        swipeable: false
+                        }} title="Journal">
+                        <Jumbotron id="jumbo">
                             <h3>Wellness Journal</h3>
                             <hr/>
                             <Form.Group>
