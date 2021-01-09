@@ -75,7 +75,6 @@ const TimerForm = () => {
                     )
                 })};
             </Row>
-            
         </Container>
     );
 };
