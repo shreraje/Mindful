@@ -239,6 +239,7 @@ function Video() {
                 </Slider>
             </Tab>
             </Tabs>
+            <Footer/>
         </div>
     );
 };

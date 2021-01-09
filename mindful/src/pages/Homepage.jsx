@@ -66,6 +66,7 @@ const Homepage = () => {
                         </Row>
                 </Container>
             </Jumbotron>
+            <Footer/>
         </div>
     );
 };
