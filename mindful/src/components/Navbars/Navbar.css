@@ -50,7 +50,8 @@
       left: 5%;
       top: 50%;
       transform: translate(-5%, -50%);
-      z-index: 2;
+      z-index: 51;
+      opacity: 1;
     }
 
     .nav-links {
@@ -68,13 +69,14 @@
 
     .nav-links.open { 
       background-image: url(https://tse3.mm.bing.net/th?id=OIP.5v1LpG7s3XNp57d1JdNbagHaEK&pid=Api&P=0&w=370&h=209);
-      opacity: cover;
-      color: white;
+      background-size: cover;
+      /* opacity: 1; */
       padding-top: 0.75in;
       padding-left: 0.25in;
       clip-path: circle(1000px at -90% -10%);
       -webkit-clip-path: circle(1000px at -90% -10%);
       pointer-events: all;
+      z-index: 50;
     }
 
     .nav-links li{
