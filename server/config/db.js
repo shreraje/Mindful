@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 async function db() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/todo_db', {
+    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mindful_db', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
@@ -13,6 +13,6 @@ async function db() {
     console.log('error connecting to db: ');
     console.log(error);
   }
-}
+};
 
 module.exports = db;
