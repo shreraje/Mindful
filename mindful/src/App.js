@@ -7,11 +7,14 @@ import BreathingExercise from './pages/Breathingexercise.jsx';
 import Video from './pages/Video';
 import Workout from './pages/Workout';
 import Contact from './pages/Contact';
+import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';
 
 function App() {
+  Axios.get('/api/mindful/')
+    .then((res) => console.log(res))
   return (
     <div>
       <BrowserRouter>

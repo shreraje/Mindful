@@ -1,6 +1,13 @@
-const router = require('express').Router;
-const mindful = require('./mindful.routes');
+const router = require('express').Router();
+const path = require('path');
+const apiRoutes = require ('./api')
 
-router.arguments('/api/mindful', mindful);
+
+
+router.use('/', apiRoutes);
+
+router.use(function(req, res) {
+    res.sendFile(path.join(__dirname, "../../mindful/build/index.html"))
+})
 
 module.exports = router
