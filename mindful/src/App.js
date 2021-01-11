@@ -13,8 +13,8 @@ import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';
 
 function App() {
-  Axios.get('/api/mindful/')
-    .then((res) => console.log(res))
+  // Axios.get('/api/mindful/')
+  //   .then((res) => console.log(res))
   return (
     <div>
       <BrowserRouter>
