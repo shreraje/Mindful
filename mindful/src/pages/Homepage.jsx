@@ -31,7 +31,7 @@ const Homepage = () => {
                                                 <Card.Text>
                                                     Through this page you will see an array of videos regarding everything from yoga, to relaxation exercises, to lifestyle videos to help focus on your relaxation levels.
                                                 </Card.Text>
-                                                <Button href="/videos">Videos</Button>
+                                                <Button href="/video">Videos</Button>
                                             </Card.Body>
                                         </Card>
                                     </Col>
@@ -58,7 +58,7 @@ const Homepage = () => {
                                             <Card.Text>
                                                 Exercise is a vital part of living a healthy life. Use this page to create workout plans and track your progress!
                                             </Card.Text>
-                                            <Button href="/workouts">Workouts</Button>
+                                            <Button href="/workout">Workouts</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
