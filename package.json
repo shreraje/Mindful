@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon server/server.js",
+    "watch": "nodemon server.js",
     "heroku-postbuild": "cd ../mindful && npm run deploy"
   },
   "repository": {

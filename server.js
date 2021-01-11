@@ -16,7 +16,7 @@ app.use(routes);
 
 app.use(express.static(path.join(__dirname, "mindful/build")));
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, "../mindful/build/index.html"))
+  res.sendFile(path.join(__dirname, "mindful", "build", "index.html"))
 })
 
 app.listen(PORT, () => {
