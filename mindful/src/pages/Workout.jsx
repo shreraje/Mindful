@@ -1,12 +1,17 @@
 import React from 'react';
 import Navbar from '../components/Navbars/Navbar';
 import Footer from '../components/Footer/Footer';
+import Axios from 'axios';
 import '../App.css'
 import { Jumbotron, Container, Form , Button, Popover, OverlayTrigger, Card } from 'react-bootstrap'
 import 'materialize-css';
 import { Tab, Tabs } from 'react-materialize';
 
+
 const workoutPopover = (
+    Axios.get('/workout')
+        .then((res) => {console.log(res)}),
+
     <Popover id = "popover-basic">
         <Popover.Title as="h3">Exercise Categories</Popover.Title>
         <Popover.Content>
