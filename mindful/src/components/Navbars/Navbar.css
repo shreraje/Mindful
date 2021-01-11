@@ -1,5 +1,7 @@
 .nav-wrapper {
     background-color: grey;
+    position: fixed;
+    
 }
 
 .mindful-text {
@@ -29,8 +31,8 @@
     display: flex;
   }
 
-  @media screen and (max-width: 768px) {
-
+  @media screen and (max-width: 1000px) {
+    
     .line {
       width: 30px;
       height: 3px;
@@ -68,13 +70,15 @@
     }
 
     .nav-links.open { 
-      background-image: url(https://tse3.mm.bing.net/th?id=OIP.5v1LpG7s3XNp57d1JdNbagHaEK&pid=Api&P=0&w=370&h=209);
+      background-image: url(https://get.pxhere.com/photo/sun-statue-meditate-buddhism-religion-asia-darkness-blue-rest-zen-relaxation-figure-meditation-turquoise-illustration-yoga-buddha-mirroring-believe-harmony-force-wellness-inner-calm-fern-stlich-fictional-character-gautama-buddha-889766.jpg);
       background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       /* opacity: 1; */
-      padding-top: 0.75in;
+      padding-top: 0.5in;
       padding-left: 0.25in;
-      clip-path: circle(1000px at -90% -10%);
-      -webkit-clip-path: circle(1000px at -90% -10%);
+      clip-path: circle(1200px at -90% 20%);
+      -webkit-clip-path: circle(1200px at -90% 20%);
       pointer-events: all;
       z-index: 50;
     }
