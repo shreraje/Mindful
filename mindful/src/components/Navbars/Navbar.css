@@ -56,9 +56,12 @@
       opacity: 1;
     }
 
+    .nav-wrapper {
+      background: black;
+    }
+
     .nav-links {
       position: fixed;
-      background: grey;
       height: 100vh;
       width: 100%;
       flex-direction: column;
