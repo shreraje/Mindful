@@ -52,7 +52,7 @@
       left: 5%;
       top: 50%;
       transform: translate(-5%, -50%);
-      z-index: 51;
+      z-index: 2;
       opacity: 1;
     }
 
@@ -83,7 +83,7 @@
       clip-path: circle(1200px at -90% 20%);
       -webkit-clip-path: circle(1200px at -90% 20%);
       pointer-events: all;
-      z-index: 50;
+      z-index: 1;
     }
 
     .nav-links li{
@@ -95,18 +95,18 @@
     }
 
     .nav-links li:nth-child(1) {
-      transition: all 0.5s ease 0.2s;
+      transition: all 0.5s ease 0.1s;
     }
 
     .nav-links li:nth-child(2) {
-      transition: all 0.5s ease 0.4s;
+      transition: all 0.5s ease 0.2s;
     }
 
     .nav-links li:nth-child(3) {
-      transition: all 0.5s ease 0.6s;
+      transition: all 0.5s ease 0.3s;
     }
     
     .nav-links li:nth-child(4) {
-      transition: all 0.5s ease 0.8s;
+      transition: all 0.5s ease 0.4s;
     }
   }  
