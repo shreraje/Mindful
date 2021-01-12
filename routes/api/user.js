@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require('../../models/user');
 const passport = require('../../passport');
 
-
+//Signup route
 router.post('/', (req, res) => {
     console.log('USER SIGNUP POST ROUTE');
 
@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
     //ADD VALIDATION
     User.findOne({ username: username }, (err, user) => {
         if (err) {
-            console.log('User.js post error: ', err)
+            console.log('USER.JS POST ERROR: ', err)
         } else if (user) {
             res.json({
                 error: `A user already exists with the username: ${username}`
@@ -29,6 +29,7 @@ router.post('/', (req, res) => {
     });
 });
 
+//Login route
 router.post(
     '/login',
     function(req, res, next) {
@@ -39,7 +40,7 @@ router.post(
 
     passpot.authenticate('local'),
     (req, res) => {
-        console.log('logged in', req.user);
+        console.log('LOGGED IN', req.user);
         const userInfo = {
             username: req.user.username
         };
@@ -47,8 +48,8 @@ router.post(
     }
 )
 
-router.get('/', (req, res, next) => {
-    console.log('=======user!!=====');
+router.get('/welcome', (req, res, next) => {
+    console.log('=======USER!!=====');
     console.log(req.user);
     if (req.user) {
         res.json({ user: req.user });
@@ -60,9 +61,9 @@ router.get('/', (req, res, next) => {
 router.post('/logout', (req, res) => {
     if (req.user) {
         req.logout();
-        res.send({ msg: 'logging out' });
+        res.send({ msg: 'LOGGIN OUT' });
     } else {
-        res.send({ msg: 'no user to log out' });
+        res.send({ msg: 'NO USER TO LOG OUT' });
     }
 });
 
