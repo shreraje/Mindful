@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Welcome from './pages/welcome/Welcomepage';
-import Homepage from './pages/Homepage.jsx';
+import Homepage from './pages/Homepage';
 import BreathingExercise from './pages/Breathingexercise.jsx';
 import Video from './pages/Video';
 import Workout from './pages/Workout';
