@@ -23,5 +23,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.11.8"
+  },
+  "devDependencies": {
+    "bcrypt": "^5.0.0"
   }
 }
