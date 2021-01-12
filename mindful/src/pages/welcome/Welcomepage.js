@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Button, Form, Container, Jumbotron } from 'react-bootstrap';
 import Navbar from '../../components/Navbars/Navbar';
@@ -10,7 +11,7 @@ class Welcome extends React.Component {
         super();
 
         this.state = {
-            email: '',
+            username: '',
             password: ''
         };
     };
@@ -23,8 +24,8 @@ class Welcome extends React.Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        console.log(`SIGNUP FORM USER: ${this.state.email}`);
-        //request to server here
+        console.log(`SIGNUP FORM USER: ${this.state.username}`);
+        //Route to POST user data collected from the form
         axios.post('/', {
             username: this.state.username,
             password: this.state.password
@@ -32,17 +33,16 @@ class Welcome extends React.Component {
         .then(response => {
             console.log(response);
             if (response.data) {
-                console.log('successful signup');
+                console.log(`SIGNUP REQUEST BY ${response}`);
                 this.setState({
                     redirectTo: '/login'
                 });
             } else {
-                console.log('Signup error');
+                console.log('USERNAME ALREADY TAKEN');
             }
         })
         .catch(err => {
-            console.log('Sign up server error');
-            console.log(err);
+            console.log('SIGNUP SERVER ERROR', err);
         });
     };
 
@@ -63,7 +63,7 @@ class Welcome extends React.Component {
                                         type="text" 
                                         name="email" 
                                         placeholder="Enter email" 
-                                        value={this.state.email}
+                                        value={this.state.username}
                                         onChange={this.handleInputChange}
                                     />
                                     <Form.Text className="text-muted">
@@ -85,11 +85,17 @@ class Welcome extends React.Component {
                                     <Form.Check type="checkbox" label="Remember me" />
                                 </Form.Group>
                                 <Button variant="info" type="submit">
-                                    Sign in
+                                    Sign Up
                                 </Button>
+
+                                <Form.Text>Already have an account?</Form.Text>
+                                <Button
+                                    variant="info"
+                                    type="button"
+                                ><Link to="/login">Login here!</Link></Button>
                             </Form>
                         </Jumbotron>
-                   
+                
                 </Container>
             </div >
         );
