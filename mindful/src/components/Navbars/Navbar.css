@@ -1,5 +1,5 @@
 .nav-wrapper {
-    background-color: grey;
+    background: rgb(83, 78, 78);
     position: fixed;
     
 }
@@ -31,6 +31,12 @@
     display: flex;
   }
 
+  @media screen and (max-width: 425px) {
+    .nav-links li a {
+      font-size: 15px;
+    }
+
+  }
   @media screen and (max-width: 1000px) {
     
     .line {

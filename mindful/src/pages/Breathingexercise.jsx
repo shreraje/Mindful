@@ -8,7 +8,7 @@ function BreathingExercise() {
     return(
         <div>
             <Navbar/>
-            <Jumbotron>
+            <Jumbotron className="jumbotron-fluid">
                 <TimerForm/>   
             </Jumbotron>
             <Footer/>
