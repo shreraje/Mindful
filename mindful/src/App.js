@@ -7,7 +7,7 @@ import BreathingExercise from './pages/Breathingexercise.jsx';
 import Video from './pages/Video';
 import Workout from './pages/Workout';
 import Contact from './pages/Contact';
-import Axios from 'axios';
+// import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import logo from '../../image/mindful_logo.png';
 import text from '../../image/mindful_text.png';
 // import 'materialize-css'; // It installs the JS asset onlyz
@@ -28,10 +28,10 @@ const Navbar = () => {
           <a href="/"><img src={logo} width="70" height="57" alt="App Logo" className="brand-logo center hoverable"></img></a>
           <a href="/welcome" className="login right"><b>Login</b></a>
           <ul id="nav-mobile" className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/breathing">Breathing Exercises</Link></li>
-            <li><Link to="/video">Video Resources</Link></li>
-            <li><Link to="/workout">Workout Tracker</Link></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/breathing">Breathing Exercises</a></li>
+            <li><a href="/video">Video Resources</a></li>
+            <li><a href="/workout">Workout Tracker</a></li>
           </ul>
         </div>
       </nav>
