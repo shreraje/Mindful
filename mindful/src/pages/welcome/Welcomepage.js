@@ -11,29 +11,31 @@ class Welcome extends React.Component {
         super();
 
         this.state = {
-            username: '',
-            password: ''
+            username: null,
+            password: null
         };
     };
 
+    //Handle changes to form fields
     handleInputChange = event => {
         this.setState({
             [event.target.name]: event.target.value
         });
     };
 
+    //Handle form submit event + post user data to DB
     handleFormSubmit = event => {
         event.preventDefault();
-        console.log(`SIGNUP FORM USER: ${this.state.username}`);
+        console.log(`SIGNUP REQUEST FROM USER: ${this.state.username}`);
         //Route to POST user data collected from the form
-        axios.post('/', {
+        axios.post('/user/', {
             username: this.state.username,
             password: this.state.password
         })
         .then(response => {
             console.log(response);
-            if (response.data) {
-                console.log(`SIGNUP REQUEST BY ${response}`);
+            if (!response.data.errmsg) {
+                console.log('SUCCESSFUL SIGNUP');
                 this.setState({
                     redirectTo: '/login'
                 });
@@ -61,7 +63,7 @@ class Welcome extends React.Component {
                                     <Form.Label>Email address</Form.Label>
                                     <Form.Control 
                                         type="text" 
-                                        name="email" 
+                                        name="username" 
                                         placeholder="Enter email" 
                                         value={this.state.username}
                                         onChange={this.handleInputChange}

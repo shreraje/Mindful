@@ -1,5 +1,5 @@
-const User = require('../database/models/user')
-const LocalStrategy = require('passport-local').Strategy
+const User = require('../models/user');
+const LocalStrategy = require('passport-local').Strategy;
 
 const strategy = new LocalStrategy(
 	{
@@ -17,7 +17,7 @@ const strategy = new LocalStrategy(
 				return done(null, false, { message: 'Incorrect password' })
 			}
 			return done(null, user)
-		})
+		});
 	}
 )
 
