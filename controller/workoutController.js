@@ -2,6 +2,7 @@ const db = require('../models')
 
 module.exports = {
     findAll: function(req, res) {
+        console.log('hit server');
         db.Journal
             .find(req.query)
             .sort({ date: -1 })

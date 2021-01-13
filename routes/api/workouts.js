@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const workoutController = require('../../controller/workoutController')
 
-router.route('/workout')
+router.route('/workouts')
     .get(workoutController.findAll)
     .post(workoutController.create);
 
 
-    router.route('/workout/:id')
+    router.route('/workouts/:id')
         .put(workoutController.update)
         .delete(workoutController.remove);
 // const {
