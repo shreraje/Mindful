@@ -3,6 +3,7 @@ import Navbar from '../components/Navbars/Navbar';
 import { CardDeck, Card, Col, Row, Jumbotron, Container, Button } from 'react-bootstrap';
 import Footer from '../components/Footer/Footer';
 // import { Button } from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Homepage = () => {
     return (
@@ -20,7 +21,7 @@ const Homepage = () => {
                                         <Card.Text>
                                             Breathing exercises are one of the most efficient ways to deal with stress. Through this page you will have an array of shapes show up for you to breath to, to help manage your stress and breathing patterns.
                                                 </Card.Text>
-                                        <Button href="/breathing">Breathing</Button>
+                                        <Button href="/breathing" style={{ background: " rgb(126, 111, 100)"}}>Breathing</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -31,7 +32,7 @@ const Homepage = () => {
                                         <Card.Text>
                                             Through this page you will see an array of videos regarding everything from yoga, to relaxation exercises, to lifestyle videos to help focus on your relaxation levels.
                                                 </Card.Text>
-                                        <Button href="/video">Videos</Button>
+                                        <Button href="/video" style={{ background: " rgb(126, 111, 100)" }}>Videos</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -47,7 +48,7 @@ const Homepage = () => {
                                         <Card.Text>
                                             Meditation has been proven to help people relax and relieve stress. Use this feature to set timers for your meditaion.
                                             </Card.Text>
-                                        <Button href="/timers">Timers</Button>
+                                        <Button href="/timers" style={{ background: " rgb(126, 111, 100)"}}>Timers</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -58,7 +59,7 @@ const Homepage = () => {
                                         <Card.Text>
                                             Exercise is a vital part of living a healthy life. Use this page to create workout plans and track your progress!
                                             </Card.Text>
-                                        <Button href="/workout">Workouts</Button>
+                                        <Button href="/workout" style={{ background: " rgb(126, 111, 100)"}}>Workouts</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>

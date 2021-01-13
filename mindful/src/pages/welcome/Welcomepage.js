@@ -84,15 +84,15 @@ class Welcome extends React.Component {
                                 <Form.Group controlId="formBasicCheckbox">
                                     <Form.Check type="checkbox" label="Remember me" />
                                 </Form.Group>
-                                <Button variant="info" type="submit">
+                                <Button type="submit">
                                     Sign Up
                                 </Button>
 
                                 <Form.Text>Already have an account?</Form.Text>
                                 <Button
-                                    variant="info"
+                                    
                                     type="button"
-                                ><Link to="/login">Login here!</Link></Button>
+                                ><Link to="/login" style={{ color: "white"}}>Login here!</Link></Button>
                             </Form>
                         </Jumbotron>
                 

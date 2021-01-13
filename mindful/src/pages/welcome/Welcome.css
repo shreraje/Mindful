@@ -11,7 +11,7 @@ h1 {
 
 .jumbo-background {
     margin-top: .5in;
-    background-image: url(https://www.therapistaid.com/images/content/interactive/mindfulness-meditation-audio/promo.jpg);
+    background-image: url(https://www.therapistaid.com/images/content/interactive/mindfulness-meditation-audio/promo.jpg) !important;
     background-repeat: no-repeat;
     background-size: cover;
     animation: fadein 2s;
@@ -20,8 +20,11 @@ h1 {
 }
 
 .jumbot {
+    background: aliceblue !important;
     animation: fadein 2s;
 }
+
+
 
 @keyframes fadein {
     from {opacity: 0;}

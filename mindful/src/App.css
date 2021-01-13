@@ -9,6 +9,9 @@ body {
   background-image: url(https://c.pxhere.com/photos/ab/db/candle_meditation_hand_keep_heat_confidence_rest_meditate-971683.jpg!s);
   background-size: cover;  
 }
+.jumbotron-fluid {
+  background: transparent;
+}
 
 #popover-basic {
   font-size: 11px;
@@ -69,3 +72,18 @@ body {
 
 }
 
+button {
+  background: rgb(126, 111, 100) !important;
+}
+
+.btn {
+  background: rgb(126, 111, 100) !important;
+}
+
+button a:hover {
+  color: blue !important;
+}
+
+.btn:hover {
+  color: blue !important;
+}
