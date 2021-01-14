@@ -5,13 +5,13 @@ const passport = require('../../passport');
 
 //Signup route
 router.post('/', (req, res) => {
-    console.log('USER SIGNUP POST ROUTE');
+    console.log('USER SIGNUP POST ROUTE HIT');
 
     const { username, password } = req.body;
     //ADD VALIDATION
     User.findOne({ username: username }, (err, user) => {
         if (err) {
-            console.log('USER.JS POST ERROR: ', err)
+            console.log('USER.JS POST ERROR: ', err);
         } else if (user) {
             res.json({
                 error: `A user already exists with the username: ${username}`
@@ -22,12 +22,13 @@ router.post('/', (req, res) => {
                 password: password
             });
             newUser.save((err, savedUser) => {
-                if (err) return res.json(err)
-                res.json(savedUser)
+                if (err) return res.json(err);
+                res.json(savedUser);
             });
         };
     });
 });
+
 
 //Login route
 router.post(
@@ -38,7 +39,7 @@ router.post(
         next();
     },
 
-    passpot.authenticate('local'),
+    passport.authenticate('local'),
     (req, res) => {
         console.log('LOGGED IN', req.user);
         const userInfo = {
@@ -46,9 +47,10 @@ router.post(
         };
         res.send(userInfo);
     }
-)
+);
 
-router.get('/welcome', (req, res, next) => {
+
+router.get('/', (req, res, next) => {
     console.log('=======USER!!=====');
     console.log(req.user);
     if (req.user) {
@@ -58,10 +60,11 @@ router.get('/welcome', (req, res, next) => {
     }
 });
 
+
 router.post('/logout', (req, res) => {
     if (req.user) {
         req.logout();
-        res.send({ msg: 'LOGGIN OUT' });
+        res.send({ msg: 'LOGGING OUT' });
     } else {
         res.send({ msg: 'NO USER TO LOG OUT' });
     }

@@ -10,10 +10,37 @@ class Login extends React.Component {
         super();
 
         this.state = {
-            username: '',
-            passowrd: '',
-            redirectTo: null
+            username: null,
+            passowrd: null,
+            redirectTo: null,
+            loggedIn: null
         };
+    };
+
+    componentDidMount() {
+        this.getUser();
+    };
+
+    //Verify if a user is saved in the current session and retrieve data
+    getUser() {
+        axios.get('/user')
+        .then(response => {
+            console.log('GET USER RESPONSE: ', response.data);
+            if (response.data.user) {
+                console.log('GET USER: THERE IS A USER SAVED IN THE SESSION');
+
+                this.setState({
+                    loggedIn: true,
+                    username: response.data.user.username
+                });
+            } else {
+                console.log('GET USER: NO USER FOUND IN SESSION');
+                this.setState({
+                    loggedIn: false,
+                    username: null
+                });
+            }
+        });
     };
     
     //Hanlde change for form inputs
@@ -26,9 +53,9 @@ class Login extends React.Component {
     //Handle user information when login form is submitted
     handleFormSubmit = event => {
         event.preventDefault();
-        console.log('HANDLE SUBMIT HIT');
+        console.log('HANDLE LOGIN SUBMIT HIT');
         //Route to POST new user data collected from the form
-        axios.post('/login', {
+        axios.post('/user/login', {
             username: this.state.username,
             password: this.state.password
         })
@@ -49,11 +76,14 @@ class Login extends React.Component {
 
     render() {
         if (this.state.redirectTo) {
-            return <Redirect to={{ pathname: this.state.redirecTo }}/>
+            return <Redirect to={{ pathname: this.state.redirectTo }}/>
         } else {
             return (
                 <div>
-                    <Navbar/>
+                    <Navbar
+                        loggedIn={this.state.loggedIn}
+                        username={this.state.username}
+                    />
                     <Container>
                             <Jumbotron className="jumbo-background">
                                 <h1 style={{ textAlign: "center" }}>Welcome to Mindful - Login below</h1>

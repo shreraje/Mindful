@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 // import { Link } from 'react-router-dom';
 import logo from '../../image/mindful_logo.png';
 import text from '../../image/mindful_text.png';
@@ -15,7 +16,23 @@ window.onload = function () {
   });
 };
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const logout = event => {
+    event.preventDefault();
+    console.log('LOGGING OUT');
+
+    axios.post('/user/logout')
+    .then(response => {
+      console.log(response.data);
+      if (response.status === 200) {
+        props.updateUser({
+          loggedIn: false,
+          username: null
+        });
+      }
+    });
+  };
+
   return (
     <div>
       <nav>

@@ -1,13 +1,13 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
+const app = express();
 // const session = require('express-session');
-// const MongoStore = require('connect-mongo')(session);
-// // const dbConnection = require()
+// const bodyParser = require('body-parser');
+// const MongoStore = require('connect-mongostore')(session);
+// const dbConnection = require('./config/db');
 // const passport = require('./passport');
 // const user = require('./routes/api/user');
 // const logger = require('morgan');
 const routes = require('./routes');
-const app = express();
 const path = require('path');
 const cors = require('cors');
 require('./config/db')();
@@ -19,14 +19,14 @@ const PORT = process.env.PORT || 5000;
 
 // app.get('/', (req, res) => res.send('hello'))
 
-// // parsing middleware
-// app.use(express.urlencoded({ extended: true }));
+// parsing middleware
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
+app.use('/user', user);
 app.use(cors());
 
 
@@ -37,7 +37,7 @@ app.get('*', function(req, res) {
 
 //Sessions
 // app.use(session({
-//   secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+//   secret: 'hello-world', //Randmozied string to generate secure hash
 //   store: new MongoStore({ mongooseConnection: dbConnection }),
 //   resave: false, //required
 //   saveUninitialized: false //required
@@ -47,6 +47,7 @@ app.get('*', function(req, res) {
 // app.use(passport.initialize());
 // app.use(passport.session()); 
 
+//Connection to server
 app.listen(PORT, () => {
   console.log('app running on PORT: ' + PORT);
 });
