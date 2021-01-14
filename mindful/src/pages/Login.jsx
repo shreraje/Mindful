@@ -10,8 +10,8 @@ class Login extends React.Component {
         super();
 
         this.state = {
-            username: null,
-            passowrd: null,
+            username: "",
+            passowrd: "",
             redirectTo: null,
             loggedIn: null
         };

@@ -11,8 +11,8 @@ class Welcome extends React.Component {
         super();
 
         this.state = {
-            username: null,
-            password: null
+            username: "",
+            password: ""
         };
     };
 
@@ -86,7 +86,7 @@ class Welcome extends React.Component {
                                 <Form.Group controlId="formBasicCheckbox">
                                     <Form.Check type="checkbox" label="Remember me" />
                                 </Form.Group>
-                                <Button type="submit">
+                                <Button type="submit" onClick={this.handleFormSubmit}>
                                     Sign Up
                                 </Button>
 
@@ -94,7 +94,7 @@ class Welcome extends React.Component {
                                 <Button
                                     
                                     type="button"
-                                ><Link to="/login" style={{ color: "white"}}>Login here!</Link></Button>
+                                ><a href="/login" style={{ color: "white"}}>Login here!</a></Button>
                             </Form>
                         </Jumbotron>
                 
