@@ -23,8 +23,7 @@ app.use(bodyParser.json());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(routes);
-app.use('/user', user);
+
 app.use(cors());
 
 
@@ -44,6 +43,9 @@ app.use(session({
 //Passport 
 app.use(passport.initialize());
 app.use(passport.session()); 
+
+app.use(routes);
+app.use('/user', user);
 
 //Connection to server
 app.listen(PORT, () => {
