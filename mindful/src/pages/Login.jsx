@@ -75,8 +75,9 @@ class Login extends React.Component {
     };
 
     render() {
+        //If user login is successful redirect to homepage, else render login page
         if (this.state.redirectTo) {
-            return <Redirect to={{ pathname: this.state.redirectTo }}/>
+            return <Redirect to='/'/>
         } else {
             return (
                 <div>
