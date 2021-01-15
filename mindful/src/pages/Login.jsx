@@ -56,8 +56,8 @@ class Login extends React.Component {
         console.log('HANDLE LOGIN SUBMIT HIT');
         //Route to POST new user data collected from the form
         axios.post('/user/login', {
-            username: this.state.username,
-            password: this.state.password
+                username: this.state.username,
+                password: this.state.password
         })
         .then(response => {
             console.log(`LOGIN RESPONSE: ${response}`);
