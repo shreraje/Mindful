@@ -31,7 +31,7 @@ function Video() {
                         interval: 2000000
                     }}
                     >
-                    <Slide image={<img alt="" src="http://lorempixel.com/780/580/nature/1"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                             25 Min Total Body Yoga & Tension Release | Yoga Healing From The Inside Out
@@ -44,7 +44,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="http://lorempixel.com/780/580/nature/2"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                             25 Minute Yoga for Strength | Breathe and Flow Yoga
@@ -56,7 +56,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="https://lorempixel.com/780/580/nature/3"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                             Full Body Stretch Yoga - 30 Minute Flexibility & Deep Stretch Workout
@@ -68,7 +68,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="https://lorempixel.com/580/250/nature/4"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                             Yoga For Anxiety and Stress
@@ -107,7 +107,7 @@ function Video() {
                         interval: 2000000
                     }}
                     >
-                    <Slide image={<img alt="" src="http://lorempixel.com/780/580/nature/1"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                             Relaxing Sleep Music • Deep Sleeping Music, Relaxing Music, Stress Relief, Meditation Music (Flying)  
@@ -119,7 +119,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="http://lorempixel.com/780/580/nature/2"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                         Gentle Night Rain 12 HOURS - Sleep, Insomnia, Meditation, Relaxing, Study
@@ -131,7 +131,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="https://lorempixel.com/780/580/nature/3"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                             Peaceful Piano & Soft Rain - Relaxing Sleep Music, A Bitter Rain
@@ -143,7 +143,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="https://lorempixel.com/580/250/nature/4"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                         Ocean Sounds and Forest Nature Sound: Meditation, Sleep
@@ -188,7 +188,7 @@ function Video() {
                         interval: 2000000
                     }}
                     >
-                    <Slide image={<img alt="" src="http://lorempixel.com/780/580/nature/1"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                             10-Minute Meditation For Beginners
@@ -200,7 +200,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="http://lorempixel.com/780/580/nature/2"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                         5-Minute Meditation You Can Do Anywhere
@@ -212,7 +212,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="https://lorempixel.com/780/580/nature/3"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                             Guided Meditation - Blissful Deep Relaxation
@@ -224,7 +224,7 @@ function Video() {
                         </h5>
                         </Caption>
                     </Slide>
-                    <Slide image={<img alt="" src="https://lorempixel.com/580/250/nature/4"/>}>
+                    <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">
                         <h3>
                         Guided Meditation for Detachment From Over-Thinking (Anxiety / OCD / Depression)
