@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer';
 
 function Video() {
     return(
-        <div style={{justifyContent:'center'}}>
+        <div style={{justifyContent:'center', alignItems: "center"}}>
             <Navbar/>
             <Tabs className="tab-demo z-depth-1 tabs-fixed-width">
 
@@ -38,11 +38,17 @@ function Video() {
                         
                         </h3>
                         <h5 className="light grey-text text-lighten-3">
-                        <ReactPlayer
-                            url="https://www.youtube.com/watch?v=GjMSgK5H4ho"
-                        />
-                        </h5>
+                    </h5>
+                            <ReactPlayer
+                                url="https://www.youtube.com/watch?v=GjMSgK5H4ho"
+                                className="player"  
+                                width="100%"
+                                height="10%"
+                            />
+
+
                         </Caption>
+                        
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
                         <Caption placement="center">

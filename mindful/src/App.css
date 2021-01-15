@@ -87,3 +87,7 @@ button a:hover {
 .btn:hover {
   color: blue !important;
 }
+
+#center {
+  align-items: center;
+}
