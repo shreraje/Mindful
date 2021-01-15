@@ -47,6 +47,10 @@ const JournalSchema = new Schema({
                 type: Number,
                 trim: true,
                 required: true
+            },
+
+            date: {
+                type: Date.now()
             }
         }
     ],
