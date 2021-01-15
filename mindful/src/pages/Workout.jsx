@@ -86,18 +86,9 @@ const meditationPopover = (
 
 function Workout() {
 
-    const [workouts, setWorkouts] = useState([])
-    const [formObject, setFormObject] = useState({
-        wcategory: "",
-        wduration: "",
-        mcategory: "",
-        mduration: "",
-        jounral: ""
-    })
 
     useEffect(() => {
         loadWorkouts();
-
     }, [])
     
     function loadWorkouts() {
@@ -108,7 +99,6 @@ function Workout() {
             )
     }
 
-    
         return(
             <div>
                 <Navbar/>
@@ -166,7 +156,7 @@ function Workout() {
                                 <Form.Group>
                                     <Form>
                                         <Form.Label>Exercise Category</Form.Label>
-                                        <Form.Control as="select" id="workout-category">
+                                        <Form.Control as="select" id="workout-category" name="category">
                                             <option>Endurance</option>
                                             <option>Strength</option>
                                             <option>Flexibility</option>
@@ -181,11 +171,11 @@ function Workout() {
                                     </Form>
                                     <Form>
                                         <Form.Label>Workout Name</Form.Label>
-                                        <Form.Control as="textarea"/>
+                                        <Form.Control as="textarea"  name="name"/>
                                     </Form>
                                     <Form>
                                         <Form.Label>Workout Duration</Form.Label>
-                                        <Form.Control as="textarea"/>
+                                        <Form.Control as="textarea" name="duration"/>
                                         <br/>
     
                                         <Button>Submit</Button>
