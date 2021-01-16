@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { Button, Form, Container, Jumbotron } from 'react-bootstrap';
