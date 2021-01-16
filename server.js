@@ -28,9 +28,7 @@ app.use(cors());
 
 
 app.use(express.static(path.join(__dirname, "mindful/build")));
-app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, "mindful", "build", "index.html"))
-});
+
 
 //Sessions
 // app.use(session({
@@ -46,6 +44,10 @@ app.use(passport.session());
 
 app.use(routes);
 app.use('/user', user);
+
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, "mindful", "build", "index.html"))
+});
 
 //Connection to server
 app.listen(PORT, () => {
