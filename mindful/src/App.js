@@ -8,6 +8,7 @@ import Video from './pages/Video';
 import Workout from './pages/Workout';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import About from './pages/About';
 // import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/workout" component={Workout}/>
           <Route exact path="/contact" component={Contact}/>
           <Route exact path="/login" component={Login}/>
+          <Route exact path="/about" component={About}/>
         </Switch>
       </BrowserRouter>
     </div>
