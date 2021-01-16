@@ -14,7 +14,7 @@ function Contact() {
                                 <Col>
 
                                         <Card className="card card-evan">
-                                            <Card.Body className="cardText">
+                                            <Card.Body className="cardText" style={{backgroundColor: "white"}}>
                                                 <Card.Title >Evan Mackay</Card.Title>
                                                 <Card.Text>
                                                    Overall Mastermind and captain. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below
@@ -25,7 +25,7 @@ function Contact() {
                                     </Col>
                                     <Col>
                                         <Card className="card card-evan">
-                                            <Card.Body className="cardText">
+                                            <Card.Body className="cardText" style={{backgroundColor: "white"}}>
                                                 <Card.Title >Jon Jesse</Card.Title>
                                                 <Card.Text>
                                                     Back End Guru, legend with css images. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below
@@ -41,7 +41,7 @@ function Contact() {
                                 <CardDeck>
                                 <Col>
                                     <Card className="card card-evan">
-                                        <Card.Body className="cardText">
+                                        <Card.Body className="cardText" style={{backgroundColor: "white"}}>
                                             <Card.Title>Raj Shreshtha</Card.Title>
                                             <Card.Text>
                                                 Front end wizard. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below
@@ -52,7 +52,7 @@ function Contact() {
                                 </Col>
                                 <Col>
                                     <Card className="card card-evan">
-                                        <Card.Body className="cardText">
+                                        <Card.Body className="cardText" style={{backgroundColor: "white"}}>
                                             <Card.Title>Dallin Suppes</Card.Title>
                                             <Card.Text>
                                                 Mediocore front end. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below 
