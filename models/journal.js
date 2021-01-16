@@ -7,7 +7,7 @@ const JournalSchema = new Schema({
         default: Date.now
     },
 
-    exercises: [
+    exercises: 
         {
             type: {
                 type: String,
@@ -27,9 +27,9 @@ const JournalSchema = new Schema({
                 required: true
             } 
         }
-    ],
+    ,
 
-    meditations: [
+    meditations: 
         {
             type: {
                 type: String,
@@ -50,10 +50,11 @@ const JournalSchema = new Schema({
             },
 
             date: {
-                type: Date.now()
+                type: Date,
+                default: Date.now()
             }
         }
-    ],
+    ,
 
     text: {
         type: String,

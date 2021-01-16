@@ -3,6 +3,7 @@ import Navbar from '../components/Navbars/Navbar';
 import Footer from '../components/Footer/Footer';
 // import axios from 'axios';
 import API from '../Axios/apiCalls';
+import axios from 'axios'
 import '../App.css'
 import { Jumbotron, Container, Form , Button, Popover, OverlayTrigger, Card } from 'react-bootstrap'
 import 'materialize-css';
@@ -85,57 +86,117 @@ const meditationPopover = (
 
 
 class Workout extends React.Component {
-    state = {
-        exercises: [{
-            type: "",
-            name: "",
-            duration: ""
-        }],
-        meditations: [{
-            type: "",
-            name: "",
-            duration: ""
-        }],
-        text: ""
+
+    constructor(props) {
+        super(props) 
+            this.handleExerciseChangeType = this.handleExerciseChangeType.bind(this);
+            this.handleExerciseChangeName = this.handleExerciseChangeName.bind(this);
+            this.handleExerciseChangeDuration = this.handleExerciseChangeDuration.bind(this);
+
+            this.state = {
+                exercises: {
+                    type: "",
+                    name: "",
+                    duration: ""
+                },
+                meditations: {
+                    type: "",
+                    name: "",
+                    duration: ""
+                },
+                text: "",
+                responseData: {}
+            }
+
     }
 
     handleExerciseChangeType = event => {
-        this.setState({ exercises: [{
-            type: event.target.value
-        }]})
+        const value = event.target.value;
+        console.log(this.state.exercises)
+
+        this.setState((state) => {
+            return {
+                exercises: Object.assign({}, 
+                    state.exercises, {
+                        type: value
+                    })
+            }
+        })
     }
 
     handleExerciseChangeName = event => {
-        this.setState({ exercises: [{
-            name: event.target.value
-        }]})
+        const value = event.target.value;
+        console.log(this.state.exercises)
+
+
+        this.setState((state) => {
+            return {
+                exercises: Object.assign({}, 
+                    state.exercises, {
+                        name: value
+                    })
+            }
+        })
     }
 
     handleExerciseChangeDuration = event => {
-        this.setState({ exercises: [{
-            duration: event.target.value
-        }]})
+        const value = event.target.value;
+        console.log(this.state.exercises)
+
+
+        this.setState((state) => {
+            return {
+                exercises: Object.assign({}, 
+                    state.exercises, {
+                        duration: value
+                    })
+            }
+        })
     }
 
     handleMeditationChangeType = event => {
-        this.setState({ meditations: [{
-            type: event.target.value
-        }]})
-        
+        const value = event.target.value;
+        console.log(this.state.exercises)
+
+
+        this.setState((state) => {
+            return {
+                meditations: Object.assign({}, 
+                    state.meditations, {
+                        type: value
+                    })
+            }
+        })
     }
 
     handleMeditationChangeName = event => {
-        this.setState({ meditations: [{
-            name: event.target.value
-        }]})
-        
+        const value = event.target.value;
+        console.log(this.state.exercises)
+
+
+        this.setState((state) => {
+            return {
+                meditations: Object.assign({}, 
+                    state.meditations, {
+                        name: value
+                    })
+            }
+        })
     }
 
     handleMeditationChangeDuration = event => {
-        this.setState({ meditations: [{
-            duration: event.target.value
-        }]})
-        
+        const value = event.target.value;
+        console.log(this.state.exercises)
+
+
+        this.setState((state) => {
+            return {
+                meditations: Object.assign({}, 
+                    state.meditations, {
+                        duration: value
+                    })
+            }
+        })
     }
 
     handleJournalChange = event => {
@@ -146,23 +207,24 @@ class Workout extends React.Component {
     handleExerciseSubmit = event => {
         event.preventDefault();
         const exerciseData = {
-            exercises: [{
-                type: this.state.type,
-                name: this.state.name,
-                duration: this.state.duration
-            }]
+            exercises: {
+                type: this.state.exercises.type,
+                name: this.state.exercises.name,
+                duration: this.state.exercises.duration
+            }
         }
+        console.log(exerciseData)
         API.postWorkouts(exerciseData)
     }
 
     handleMeditationSubmit = event => {
         event.preventDefault();
         const meditationData = {
-            meditation: [{
-                type: this.state.meditations[0].type,
-                name: this.state.meditations[0].name,
-                duration: this.state.meditations[0].duration
-            }]
+            meditation: {
+                type: this.state.meditations.type,
+                name: this.state.meditations.name,
+                duration: this.state.meditations.duration
+            }
         }
         API.postWorkouts(meditationData)
         console.log(meditationData);
@@ -178,13 +240,23 @@ class Workout extends React.Component {
     }
 
     componentDidMount() {
-        API.getWorkouts()
-            .then(res => console.log(res.data))
+        let exerciseData = [];
+        axios.get('/api/workouts/workouts')
+            .then(res => {
+                console.log(res);
+                // exerciseData = res.data.map((apiData) => {
+                    
+                //         console.log(apiData)
+                    
+                // })
+                // this.setState({responseData: exerciseData});
+            })
+            .catch(err => console.log(err))
     }
 
     render() {
         
-        console.log(this.state.meditations)
+        console.log(this.state)
             return(
                 <div>
                     <Navbar/>
@@ -215,8 +287,8 @@ class Workout extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Meditation</Card.Title>
                                                 <hr/>
-                                                <Card.Text>History: {this.state.meditations[0].name} completed on {this.state.meditations.date} </Card.Text>
-                                                <Card.Text>Total Meditation Duration: {this.state.meditations[0].duration} </Card.Text>
+                                                <Card.Text>History: </Card.Text>
+                                                <Card.Text>Meditation Duration:  </Card.Text>
                                             </Card.Body>
                                         </Card>
         
@@ -224,7 +296,7 @@ class Workout extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Wellness Journal</Card.Title>
                                                 <hr/>
-                                                <Card.Text>{this.state.text}</Card.Text>
+                                                <Card.Text></Card.Text>
                                             </Card.Body>
                                         </Card>
                                     </Jumbotron>
@@ -242,11 +314,11 @@ class Workout extends React.Component {
                                     <Form.Group>
                                         <Form>
                                             <Form.Label>Exercise Category</Form.Label>
-                                            <Form.Control as="select" id="workout-category" name="category">
-                                                <option>Endurance</option>
-                                                <option>Strength</option>
-                                                <option>Flexibility</option>
-                                                <option>Balance</option>
+                                            <Form.Control as="select" id="workout-category" name="type" value={this.state.exercises.type} onChange={this.handleExerciseChangeType}>
+                                                <option value="Endurance">Endurance</option>
+                                                <option value="Strength">Strength</option>
+                                                <option value="Flexibility">Flexibility</option>
+                                                <option value="Balance">Balance</option>
                                             </Form.Control>
                                             <br/>
                                             <OverlayTrigger trigger="hover" placement="right" overlay={workoutPopover}>
@@ -257,14 +329,14 @@ class Workout extends React.Component {
                                         </Form>
                                         <Form>
                                             <Form.Label>Workout Name</Form.Label>
-                                            <Form.Control as="textarea"  name="name"/>
+                                            <Form.Control as="textarea"  name="name" onChange={this.handleExerciseChangeName} value={this.state.exercises.name}/>
                                         </Form>
                                         <Form>
-                                            <Form.Label>Workout Duration</Form.Label>
-                                            <Form.Control as="textarea" name="duration"/>
+                                            <Form.Label>Workout Duration in Minutes</Form.Label>
+                                            <Form.Control as="textarea" name="duration" onChange={this.handleExerciseChangeDuration} value={this.state.exercises.duration}/>
                                             <br/>
         
-                                            <Button>Submit</Button>
+                                            <Button onClick={this.handleExerciseSubmit}>Submit</Button>
                                         </Form>
                                     </Form.Group>
         
@@ -283,7 +355,7 @@ class Workout extends React.Component {
                                         <Form>
         
                                             <Form.Label>Meditation Type</Form.Label>
-                                            <Form.Control as="select" value={this.state.meditations[0].type} onChange={this.handleMeditationChangeType}>
+                                            <Form.Control as="select" value={this.state.meditations.type} onChange={this.handleMeditationChangeType}>
                                                 <option value="Mindfulness">Mindfulness</option>
                                                 <option value="Spiritual">Spiritual</option>
                                                 <option value="Focused">Focused</option>
@@ -302,12 +374,12 @@ class Workout extends React.Component {
                                             <br/>
                                         <Form>
                                             <Form.Label>Meditation Name</Form.Label>
-                                            <Form.Control as="textarea" name="name" onChange={this.handleMeditationChangeName}/>
+                                            <Form.Control as="textarea" name="name" onChange={this.handleMeditationChangeName} value={this.state.meditations.name}/>
                                         </Form>
                                             <br/>
                                         <Form>
-                                            <Form.Label>Meditation Duration</Form.Label>
-                                            <Form.Control as="textarea" name="duration" onChange={this.handleMeditationChangeDuration} />
+                                            <Form.Label>Meditation Duration in Minutes</Form.Label>
+                                            <Form.Control as="textarea" name="duration" onChange={this.handleMeditationChangeDuration} value={this.state.meditations.duration} />
                                             <br/>
         
                                             <Button onClick={this.handleMeditationSubmit}>Submit</Button>
@@ -328,7 +400,7 @@ class Workout extends React.Component {
                                     <Form.Group>
                                         <Form onSubmit={this.handleJournalSubmit}>
                                             <Form.Label>Wellness Journal</Form.Label>
-                                            <Form.Control as="textarea" name="text" onChange={this.handleJournalChange} rows={8}/>
+                                            <Form.Control as="textarea" name="text" onChange={this.handleJournalChange} value={this.state.text} rows={8}/>
                                             <br/>
                                             <Button type="submit">Submit</Button>
         
