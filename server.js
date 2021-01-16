@@ -33,12 +33,12 @@ app.get('*', function(req, res) {
 });
 
 //Sessions
-app.use(session({
-  secret: 'hello-world', //Randmozied string to generate secure hash
-  store: new MongoStore({ mongooseConnection: dbConnection }),
-  resave: false, //required
-  saveUninitialized: false //required
-}));
+// app.use(session({
+//   secret: 'hello-world', //Randmozied string to generate secure hash
+//   store: new MongoStore({ mongooseConnection: dbConnection }),
+//   resave: false, //required
+//   saveUninitialized: false //required
+// }));
 
 //Passport 
 app.use(passport.initialize());

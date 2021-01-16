@@ -16,7 +16,7 @@ const Homepage = () => {
 
                                 <Card className="card card-breathing">
                                     <Card.Body className="cardText">
-                                        <Card.Title >Breathing Exercises</Card.Title>
+                                        <Card.Title ><b>Breathing Exercises</b></Card.Title>
                                         <Card.Text>
                                             Breathing exercises are one of the most efficient ways to deal with stress. Through this page you will have an array of shapes show up for you to breath to, to help manage your stress and breathing patterns.
                                                 </Card.Text>
@@ -27,9 +27,9 @@ const Homepage = () => {
                             <Col>
                                 <Card className="card card-videos">
                                     <Card.Body className="cardText">
-                                        <Card.Title >Videos</Card.Title>
+                                        <Card.Title ><b>Videos</b></Card.Title>
                                         <Card.Text>
-                                            Through this page you will see an array of videos regarding everything from yoga, to relaxation exercises, to lifestyle videos to help focus on your relaxation levels.
+                                        Visual and Auditory aides are always a big help. Through this page you will see an array of videos regarding everything from yoga, to relaxation exercises, to lifestyle videos to help focus on your relaxation levels.
                                                 </Card.Text>
                                         <Button href="/video" style={{ background: " rgb(126, 111, 100)" }}>Videos</Button>
                                     </Card.Body>
@@ -38,9 +38,9 @@ const Homepage = () => {
                         </CardDeck>
 
                     </Row>
-                    <Row>
+                    <Row id="workout-row">
                         <CardDeck>
-                            <Col>
+                            {/* <Col>
                                 <Card className="card card-timers">
                                     <Card.Body className="cardText">
                                         <Card.Title>Meditation Timers</Card.Title>
@@ -50,11 +50,11 @@ const Homepage = () => {
                                         <Button href="/timers" style={{ background: " rgb(126, 111, 100)"}}>Timers</Button>
                                     </Card.Body>
                                 </Card>
-                            </Col>
+                            </Col> */}
                             <Col>
                                 <Card className="card card-workouts">
                                     <Card.Body className="cardText">
-                                        <Card.Title>Workouts</Card.Title>
+                                        <Card.Title><b>Workouts</b></Card.Title>
                                         <Card.Text>
                                             Exercise is a vital part of living a healthy life. Use this page to create workout plans and track your progress!
                                             </Card.Text>
