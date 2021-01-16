@@ -73,11 +73,12 @@ body {
 }
 
 button {
-  background: rgb(126, 111, 100) !important;
+  background: #bcaaa4 !important;
 }
 
 .btn {
-  background: rgb(126, 111, 100) !important;
+  color: white;
+  background: #bcaaa4 !important;
 }
 
 button a:hover {
@@ -86,4 +87,8 @@ button a:hover {
 
 .btn:hover {
   color: blue !important;
+}
+
+#center {
+  align-items: center;
 }

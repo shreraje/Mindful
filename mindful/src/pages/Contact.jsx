@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbars/Navbar';
-import { CardDeck, Card, Col, Row, Jumbotron, Container, Button } from 'react-bootstrap';
+import { CardDeck, Card, Col, Row, Jumbotron, Container, Button, Toast } from 'react-bootstrap';
 import Footer from '../components/Footer/Footer';
 
 function Contact() {
@@ -19,7 +19,7 @@ function Contact() {
                                                 <Card.Text>
                                                    Overall Mastermind and captain. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below
                                                 </Card.Text>
-                                                <Button href="/breathing">Email</Button>
+                                                <Button>Email</Button>
                                             </Card.Body>
                                         </Card>
                                     </Col>
