@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { React } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { Button, Form, Container, Jumbotron } from 'react-bootstrap';
 import Navbar from '../../components/Navbars/Navbar';
@@ -12,7 +12,8 @@ class Welcome extends React.Component {
 
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            success: null
         };
     };
 
@@ -37,7 +38,7 @@ class Welcome extends React.Component {
             if (!response.data.errmsg) {
                 console.log('SUCCESSFUL SIGNUP');
                 this.setState({
-                    redirectTo: '/login'
+                    success: true
                 });
             } else {
                 console.log('USERNAME ALREADY TAKEN');
@@ -49,58 +50,65 @@ class Welcome extends React.Component {
     };
 
     render() {
-        return (
-            <div>
-                <Navbar/>
-                <Container>
-                        <Jumbotron className="jumbo-background">
-                            <h1 style={{ textAlign: "center" }}>Welcome to Mindful</h1>
-                        </Jumbotron>
-                        
-                        <Jumbotron className="jumbot">
-                            <Form>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Label>Email address</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        name="username" 
-                                        placeholder="Enter email" 
-                                        value={this.state.username}
-                                        onChange={this.handleInputChange}
-                                    />
-                                    <Form.Text className="text-muted">
-                                        We'll never share your email with anyone else.
-                                    </Form.Text>
-                                </Form.Group>
+        //If user is successfully signed up, they will be redirected to login page
+        const signupSuccess = this.state.success;
+        if (signupSuccess) {
+            return <Redirect to="/login"/>
+        } else {
+            return (
+                <div>
+                    <Navbar/>
+                    <Container>
+                            <Jumbotron className="jumbo-background">
+                                <h1 style={{ textAlign: "center" }}>Welcome to Mindful</h1>
+                            </Jumbotron>
+                            
+                            <Jumbotron className="jumbot">
+                                <Form>
+                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Label>Email address</Form.Label>
+                                        <Form.Control 
+                                            type="text" 
+                                            name="username" 
+                                            placeholder="Enter email" 
+                                            value={this.state.username}
+                                            onChange={this.handleInputChange}
+                                        />
+                                        <Form.Text className="text-muted">
+                                            We'll never share your email with anyone else.
+                                        </Form.Text>
+                                    </Form.Group>
+        
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Password</Form.Label>
+                                        <Form.Control 
+                                            type="text" 
+                                            name="password" 
+                                            placeholder="Password"
+                                            value={this.state.password}
+                                            onChange={this.handleInputChange}
+                                        />
+                                    </Form.Group>
+                                    <Form.Group controlId="formBasicCheckbox">
+                                        <Form.Check type="checkbox" label="Remember me" />
+                                    </Form.Group>
+                                    <Button 
+                                        type="submit" 
+                                        onClick={this.handleFormSubmit}>
+                                        Sign Up
+                                    </Button>
     
-                                <Form.Group controlId="formBasicPassword">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        name="password" 
-                                        placeholder="Password"
-                                        value={this.state.password}
-                                        onChange={this.handleInputChange}
-                                    />
-                                </Form.Group>
-                                <Form.Group controlId="formBasicCheckbox">
-                                    <Form.Check type="checkbox" label="Remember me" />
-                                </Form.Group>
-                                <Button type="submit" onClick={this.handleFormSubmit}>
-                                    Sign Up
-                                </Button>
-
-                                <Form.Text>Already have an account?</Form.Text>
-                                <Button
-                                    
-                                    type="button"
-                                ><a href="/login" style={{ color: "white"}}>Login here!</a></Button>
-                            </Form>
-                        </Jumbotron>
-                
-                </Container>
-            </div >
-        );
+                                    <Form.Text>Already have an account?</Form.Text>
+                                    <Button
+                                        type="button"
+                                    ><a href="/login" style={{ color: "white"}}>Login here!</a></Button>
+                                </Form>
+                            </Jumbotron>
+                    
+                    </Container>
+                </div >
+            );
+        }
     };
 };
 

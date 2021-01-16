@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/shreraje/Mindful#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "connect-mongostore": "^0.1.4",
     "cors": "^2.8.5",
@@ -35,8 +36,5 @@
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
-  },
-  "devDependencies": {
-    "bcrypt": "^5.0.0"
   }
 }

@@ -56,8 +56,8 @@ class Login extends React.Component {
         console.log('HANDLE LOGIN SUBMIT HIT');
         //Route to POST new user data collected from the form
         axios.post('/user/login', {
-            username: this.state.username,
-            password: this.state.password
+                username: this.state.username,
+                password: this.state.password
         })
         .then(response => {
             console.log(`LOGIN RESPONSE: ${response}`);
@@ -75,8 +75,9 @@ class Login extends React.Component {
     };
 
     render() {
+        //If user login is successful redirect to homepage, else render login page
         if (this.state.redirectTo) {
-            return <Redirect to={{ pathname: this.state.redirectTo }}/>
+            return <Redirect to='/'/>
         } else {
             return (
                 <div>
