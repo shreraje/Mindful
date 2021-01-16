@@ -65,7 +65,7 @@ class Login extends React.Component {
                 console.log('SUCCESSFUL LOGIN');
                 this.setState({
                     //Send user to homepage if successful
-                    redirectTo: '/'
+                    redirectTo: '/homepage'
                 });
             }
         })
@@ -77,7 +77,7 @@ class Login extends React.Component {
     render() {
         //If user login is successful redirect to homepage, else render login page
         if (this.state.redirectTo) {
-            return <Redirect to='/'/>
+            return <Redirect to='/homepage'/>
         } else {
             return (
                 <div>
