@@ -9,7 +9,6 @@ Mindful is a website/App with the focus of everyday users in mind that provides 
 ## Table of Contents
 * [Description](#description)
 * [User Story](#userstory)
-* [Installation](#installation)
 * [Technologies](#technologies)
 * [Contributors](#contributors)
 * [Screenshot](#screenshot)
