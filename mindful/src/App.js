@@ -20,8 +20,8 @@ function App() {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/welcome" component={Welcome}/>
-          <Route exact path="/" component={Homepage}/>
+          <Route exact path="/homepage" component={Homepage}/>
+          <Route exact path="/" component={Welcome}/>
           <Route exact path="/breathing" component={BreathingExercise}/>
           <Route exact path="/video" component={Video}/>
           <Route exact path="/workout" component={Workout}/>
