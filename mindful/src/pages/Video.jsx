@@ -26,7 +26,7 @@ function Video() {
                     fullscreen={false}
                     options={{
                         duration: 500,
-                        height: 600,
+                        height: 800,
                         indicators: true,
                         interval: 2000000
                     }}
@@ -43,7 +43,8 @@ function Video() {
                                 url="https://www.youtube.com/watch?v=GjMSgK5H4ho"
                                 className="player"  
                                 width="100%"
-                                height="10%"
+                                height={600}
+                            
                             />
 
 
@@ -55,11 +56,14 @@ function Video() {
                         <h3>
                             25 Minute Yoga for Strength | Breathe and Flow Yoga
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=52GAcwujm0k"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                       
                         </Caption>
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
@@ -67,11 +71,14 @@ function Video() {
                         <h3>
                             Full Body Stretch Yoga - 30 Minute Flexibility & Deep Stretch Workout
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                       
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=3SZ2xVnbcxY"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                        
                         </Caption>
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
@@ -79,11 +86,14 @@ function Video() {
                         <h3>
                             Yoga For Anxiety and Stress
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=hJbRpHZr_d0"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                        
                         </Caption>
                     </Slide>
                 </Slider>
@@ -108,7 +118,7 @@ function Video() {
                     fullscreen={false}
                     options={{
                         duration: 500,
-                        height: 600,
+                        height: 900,
                         indicators: true,
                         interval: 2000000
                     }}
@@ -118,11 +128,14 @@ function Video() {
                         <h3>
                             Relaxing Sleep Music • Deep Sleeping Music, Relaxing Music, Stress Relief, Meditation Music (Flying)  
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=1ZYbU82GVz4"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                       
                         </Caption>
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
@@ -130,11 +143,15 @@ function Video() {
                         <h3>
                         Gentle Night Rain 12 HOURS - Sleep, Insomnia, Meditation, Relaxing, Study
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=7JyE47-Ykjo"
+                            className="player"  
+                            width="100%"
+                            height={600}
+                            
                         />
-                        </h5>
+                        
                         </Caption>
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
@@ -142,11 +159,14 @@ function Video() {
                         <h3>
                             Peaceful Piano & Soft Rain - Relaxing Sleep Music, A Bitter Rain
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=hj83cwfOF3Y"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                       
                         </Caption>
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
@@ -154,11 +174,14 @@ function Video() {
                         <h3>
                         Ocean Sounds and Forest Nature Sound: Meditation, Sleep
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=ySL3NllIhfA"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                        
                         </Caption>
                     </Slide>
                 </Slider>
@@ -189,7 +212,7 @@ function Video() {
                     fullscreen={false}
                     options={{
                         duration: 500,
-                        height: 600,
+                        height: 900,
                         indicators: true,
                         interval: 2000000
                     }}
@@ -199,11 +222,14 @@ function Video() {
                         <h3>
                             10-Minute Meditation For Beginners
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=U9YKY7fdwyg"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                      
                         </Caption>
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
@@ -211,11 +237,14 @@ function Video() {
                         <h3>
                         5-Minute Meditation You Can Do Anywhere
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=inpok4MKVLM"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                        
                         </Caption>
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
@@ -223,11 +252,14 @@ function Video() {
                         <h3>
                             Guided Meditation - Blissful Deep Relaxation
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=Jyy0ra2WcQQ"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                        
                         </Caption>
                     </Slide>
                     <Slide image={<img alt="" src=""/>}>
@@ -235,11 +267,14 @@ function Video() {
                         <h3>
                         Guided Meditation for Detachment From Over-Thinking (Anxiety / OCD / Depression)
                         </h3>
-                        <h5 className="light grey-text text-lighten-3">
+                        
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=1vx8iUvfyCY"
+                            className="player"  
+                            width="100%"
+                            height={600}
                         />
-                        </h5>
+                        
                         </Caption>
                     </Slide>
                 </Slider>

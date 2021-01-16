@@ -17,9 +17,9 @@ function Contact() {
                                             <Card.Body className="cardText">
                                                 <Card.Title >Evan Mackay</Card.Title>
                                                 <Card.Text>
-                                                   Overall Mastermind and captain. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below
+                                                   Evan had a hand in every part of the project. He has strong skills in not only back end, but front end as well. If you have any questions at all please contact him at evan@mindful.com
                                                 </Card.Text>
-                                                <Button>Email</Button>
+                                                {/* <Button>Email</Button> */}
                                             </Card.Body>
                                         </Card>
                                     </Col>
@@ -28,9 +28,9 @@ function Contact() {
                                             <Card.Body className="cardText">
                                                 <Card.Title >Jon Jesse</Card.Title>
                                                 <Card.Text>
-                                                    Back End Guru, legend with css images. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below
+                                                    Jon had a strong hand in css images, and a knack for the back end as well as front end skills. If You have any ideas about breathing excersise images, or questions for the overall website please reach him at jon@mindful.com
                                                 </Card.Text>
-                                                <Button href="/videos">Email</Button>
+                                                {/* <Button href="/videos">Email</Button> */}
                                             </Card.Body>
                                         </Card>
                                     </Col>
@@ -44,7 +44,7 @@ function Contact() {
                                         <Card.Body className="cardText">
                                             <Card.Title>Raj Shreshtha</Card.Title>
                                             <Card.Text>
-                                                Front end wizard. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below
+                                                Raj is the front end wizard with our website. He focused much of his efforts on helping develope the front end but also has a strong understanding of the backend. Reach out to him for any front end needs at raj@mindful.com
                                             </Card.Text>
                                             <Button href="/timers">Email</Button>
                                         </Card.Body>
@@ -55,7 +55,7 @@ function Contact() {
                                         <Card.Body className="cardText">
                                             <Card.Title>Dallin Suppes</Card.Title>
                                             <Card.Text>
-                                                Mediocore front end. Please enter information about work and skills that you have done and provided in this space. 1-2 lines of information please. Email him at the button below 
+                                                Dallin helped focusing on the front end of the website. He spent much of his time helping design in format much of the webpage. If you have any questions or comments please reach out at dallin@mindful.com 
                                             </Card.Text>
                                             <Button href="/workouts">Email</Button>
                                         </Card.Body>
