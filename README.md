@@ -24,7 +24,7 @@ As users, we want to be able to enter have the opportunity to login to their own
 ## Screenshots
 Heroku Deployed App Screenshots:
 
-
+![deployed_app_screenshot](https://user-images.githubusercontent.com/61192734/104827131-7e33a680-580f-11eb-8b93-a6d500f46cbc.png)
 
 ## Links
 Heroku Deployed App: https://powerful-plateau-67004.herokuapp.com/
