@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
-//User schema for login 
+//User schema for registration and login 
 const UserSchema = new Schema({
     username: {
         type: String,
@@ -17,7 +17,8 @@ const UserSchema = new Schema({
         unique: true,
         trim: true,
         required: true,
-        validate: [({ length }) => length >= 8, 'Password requires minimum 8 characters']
+        min: 8,
+        max: 20
     },
 
     userCreated: {
@@ -26,28 +27,36 @@ const UserSchema = new Schema({
     }
 });
 
-// Define schema methods
-UserSchema.methods = {
-	checkPassword: function (inputPassword) {
-		return bcrypt.compareSync(inputPassword, this.password);
-	},
-	hashPassword: plainTextPassword => {
-		return bcrypt.hashSync(plainTextPassword, 10);
-	}
-};
-
-// Define hooks for pre-saving
-UserSchema.pre('save', function (next) {
-	if (!this.password) {
-		console.log('models/user.js =======NO PASSWORD PROVIDED=======');
-		next();
-	} else {
-		console.log('models/user.js hashPassword in pre save');
-		
-		this.password = this.hashPassword(this.password);
-		next();
-	}
+//Hooks for pre-saving
+UserSchema.pre('save', function(next) {
+    if(!this.isModified('password')) {
+        return next();
+    } else {
+        bcrypt.hash(this.password, 10, (err, passwordHash) => {
+            if(err) {
+                return next(err);
+            } else {
+                this.password = passwordHash;
+                next();
+            }
+        });
+    }
 });
+
+//Compare plaintext password to hashed verson in DB
+UserSchema.methods.comparePassword = function(password, cb) {
+    bcrypt.compare(password, this.password, (err, isMatch) => {
+        if(err) {
+            return cb(err);
+        } else {
+            if(!isMatch) {
+                return cb(null, isMatch);
+            } else {
+                return cb(null, this);
+            }
+        }
+    });
+};
 
 const User = mongoose.model('User', UserSchema);
 module.exports = User;
