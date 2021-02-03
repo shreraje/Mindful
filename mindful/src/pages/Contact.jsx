@@ -15,7 +15,7 @@ function Contact() {
 
                                         <Card className="card card-evan">
                                             <Card.Body className="cardText" style={{backgroundColor: "white"}}>
-                                                <Card.Title >Evan Mackay</Card.Title>
+                                                <Card.Title ><b>Evan Mackay</b></Card.Title>
                                                 <Card.Text>
                                                    Evan had a hand in every part of the project. He has strong skills in not only back end, but front end as well. If you have any questions at all please contact him at evan@mindful.com
                                                 </Card.Text>
@@ -26,7 +26,7 @@ function Contact() {
                                     <Col>
                                         <Card className="card card-evan">
                                             <Card.Body className="cardText" style={{backgroundColor: "white"}}>
-                                                <Card.Title >Jon Jesse</Card.Title>
+                                                <Card.Title ><b>Jon Jesse</b></Card.Title>
                                                 <Card.Text>
                                                     Jon had a strong hand in css images, and a knack for the back end as well as front end skills. If You have any ideas about breathing excersise images, or questions for the overall website please reach him at jon@mindful.com
                                                 </Card.Text>
@@ -42,22 +42,22 @@ function Contact() {
                                 <Col>
                                     <Card className="card card-evan">
                                         <Card.Body className="cardText" style={{backgroundColor: "white"}}>
-                                            <Card.Title>Raj Shreshtha</Card.Title>
+                                            <Card.Title><b>Raj Shreshtha</b></Card.Title>
                                             <Card.Text>
                                                 Raj is the front end wizard with our website. He focused much of his efforts on helping develope the front end but also has a strong understanding of the backend. Reach out to him for any front end needs at raj@mindful.com
                                             </Card.Text>
-                                            <Button href="/timers">Email</Button>
+                                            {/* <Button href="/timers">Email</Button> */}
                                         </Card.Body>
                                     </Card>
                                 </Col>
                                 <Col>
                                     <Card className="card card-evan">
                                         <Card.Body className="cardText" style={{backgroundColor: "white"}}>
-                                            <Card.Title>Dallin Suppes</Card.Title>
+                                            <Card.Title><b>Dallin Suppes</b></Card.Title>
                                             <Card.Text>
                                                 Dallin helped focusing on the front end of the website. He spent much of his time helping design in format much of the webpage. If you have any questions or comments please reach out at dallin@mindful.com 
                                             </Card.Text>
-                                            <Button href="/workouts">Email</Button>
+                                            {/* <Button href="/workouts">Email</Button> */}
                                         </Card.Body>
                                     </Card>
                                 </Col>
